@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="45px" viewBox="0 0 40 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon__subscribtion</title>
+    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Solutions" transform="translate(-632.000000, -4715.000000)">
+            <g id="Icon__subscribtion" transform="translate(632.000000, 4716.000000)">
+                <polygon id="Fill-1" fill="#009A3E" points="11.4 26.8003 17.049 32.5003 0 32.5003 0 35.4993 17.049 35.4993 11.4 41.2003 13.5 43.3003 22.799 34.0003 13.5 24.6993"></polygon>
+                <path d="M38.5997,3.9 C37.9997,3.3 37.2997,3 36.4997,3 L33.2497,3 L33.2497,0 L29.9997,0 L29.9997,3 L12.9997,3 L12.9997,0 L9.7497,0 L9.7497,3 L6.4997,3 C5.6997,3 4.9997,3.3 4.3997,3.9 C3.7997,4.5 3.4997,5.2 3.4997,6 L3.4997,26.5 L6.4997,26.5 L6.4997,15.5 L36.4997,15.5 L36.4997,37 L25.7997,37 L25.7997,40 L36.4997,40 C37.2997,40 37.9997,39.7 38.5997,39.1 C39.1997,38.5 39.4997,37.8 39.4997,37 L39.4997,6 C39.4997,5.2 39.1997,4.5 38.5997,3.9" id="Fill-2" stroke="#D51130"></path>
+            </g>
+        </g>
+    </g>
+</svg>

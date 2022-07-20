@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrow__in__circle</title>
+    <defs>
+        <path d="M12,0 C18.6290323,0 24,5.37096774 24,12 C24,18.6290323 18.6290323,24 12,24 C5.37096774,24 0,18.6290323 0,12 C0,5.37096774 5.37096774,0 12,0 Z M6.12074605,14.5410147 L11.7494963,14.5410147 L11.7494963,17.891807 C11.7494963,18.3974978 12.3803046,18.6527062 12.7442324,18.293524 L18.2904924,12.8632555 C18.5185538,12.6411296 18.5185538,12.2866734 18.2904924,12.0645476 L12.7442324,6.62955294 C12.3754522,6.27037069 11.7494963,6.52557913 11.7494963,7.03126993 L11.7494963,10.3820623 L6.12074605,10.3820623 C5.80048957,10.3820623 5.53846154,10.6372707 5.53846154,10.9491921 L5.53846154,13.9738848 C5.53846154,14.2858062 5.80048957,14.5410147 6.12074605,14.5410147 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Solutions-mobile" transform="translate(-23.000000, -4100.000000)">
+            <g id="Group-19" transform="translate(24.000000, 3526.000000)">
+                <g id="Group-12" transform="translate(0.000000, 246.000000)">
+                    <g id="arrow__in__circle" transform="translate(0.000000, 329.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" stroke="#00B948" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
