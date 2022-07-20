@@ -1,3 +1,133 @@
 //====================================================================================================
 
+.page {
+  &__about {
+  }
+}
+//==========================================================================================================================================
+.about {
+  background-color: $Back;
+  color: $Very-dark-blue;
+  @include adaptiveValue('padding-top', 183, 37);
+  @include adaptiveValue('padding-bottom', 147, 48);
+  &__container {
+  }
+
+  &__body {
+    text-align: left;
+    font-stretch: condensed;
+    @include adaptiveValue('margin-bottom', 116, 57);
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: rem(72);
+
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 30, 24);
+    }
+    &--bold {
+      font-weight: 700;
+    }
+
+    &--color {
+      color: $color__green;
+      font-weight: 700;
+    }
+  }
+  &__text {
+    font-size: rem(26);
+    font-weight: 300;
+    // line-height: 1.2;
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    justify-items: center;
+    gap: rem(24);
+  }
+
+  &__cart {
+  }
+
+  &__logo {
+    display: none;
+    @media (min-width: $mobile) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      width: 244px;
+      height: 244px;
+      border: solid 1px $border;
+      box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.1);
+      background-color: $LightGray;
+    }
+  }
+}
+//==========================================================================================================================================
+
+.cart {
+  min-width: rem(272);
+  min-height: rem(342);
+  padding: rem(36) rem(20) 0 rem(20);
+  border-radius: 20px;
+  // box-shadow: 0 0 36px 0 rgba(67, 76, 82, 0.1);
+  box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.1);
+  background-color: $LightGray;
+  &__title {
+    margin: rem(24) 0 rem(2) 0;
+    color: $Very-dark-blue;
+    font-weight: 700;
+    line-height: math.div(24, 18);
+    font-size: rem(18);
+    text-transform: uppercase;
+    font-stretch: condensed;
+  }
+
+  &__text {
+    font-family: 'Roboto', sans-serif;
+
+    color: $dark__text;
+    line-height: math.div(22, 16);
+    font-size: rem(16);
+  }
+  &::before {
+    content: '';
+
+    display: block;
+  }
+  &--virt {
+    &::before {
+      width: rem(90);
+      height: rem(70);
+      background: url('@img/main/about/virt.svg') center / cover no-repeat;
+    }
+  }
+  &--digital {
+    &::before {
+      width: rem(68);
+      height: rem(71);
+      background: url('@img/main/about/digital.svg') center / cover no-repeat;
+    }
+  }
+  &--service {
+    &::before {
+      width: rem(86);
+      height: rem(71);
+      background: url('@img/main/about/service.svg') center / cover no-repeat;
+    }
+  }
+  &--portals {
+    &::before {
+      width: rem(72);
+      height: rem(72);
+      background: url('@img/main/about/portals.svg') center / cover no-repeat;
+    }
+  }
+}
+
 //====================================================================================================
