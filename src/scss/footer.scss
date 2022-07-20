@@ -1,0 +1,119 @@
+//====================================================================================================
+.footer {
+  @include adaptiveValue('padding-top', 32, 46);
+  @include adaptiveValue('padding-bottom', 55, 48);
+
+  background-color: $dark__grey__blue;
+  color: $bag;
+  @include adaptiveValue('font-size', 18, 16);
+  // font-size: rem(18);
+  line-height: 1.67;
+  &__container {
+    padding: 0 rem(44);
+    @media (min-width: $mobile) {
+      padding: 0 rem(20);
+    }
+    // @media (min-width: $tablet) {
+    //   padding: 0 rem(10);
+    // }
+  }
+
+  &__body {
+    display: grid;
+    @include adaptiveValue('gap', 40, 20);
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: $tablet) {
+      grid-template-columns: rem(500) repeat(2, minmax(rem(200), max-content));
+
+      // grid-template-columns: rem(500) repeat(2, 1fr);
+    }
+  }
+
+  &__column {
+  }
+
+  &__text {
+  }
+
+  &__menu {
+  }
+
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__link {
+    color: rgba($color: $bag, $alpha: 0.5);
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+        color: rgba($color: $color__green, $alpha: 0.5);
+      }
+    }
+  }
+
+  &__logo {
+    margin: rem(40) 0 rem(45) 0;
+    @media (min-width: $tablet) {
+      margin: rem(-100) 0 rem(45) 0;
+    }
+  }
+
+  &__copy {
+    color: rgba($color: $bag, $alpha: 0.5);
+  }
+}
+//==========================================================================================================================================
+
+.spollers {
+  &__item {
+  }
+
+  &__title {
+    @include adaptiveValue('font-size', 18, 24);
+    text-transform: uppercase;
+
+    font-weight: 700;
+    &--visibility {
+      visibility: visible;
+      @media (min-width: $mobile) {
+        visibility: hidden;
+      }
+    }
+  }
+
+  &__body {
+  }
+}
+//==========================================================================================================================================
+
+.sales {
+  &__list {
+  }
+
+  &__item {
+    display: grid;
+    a {
+      text-decoration: underline;
+      color: rgba($color: $bag, $alpha: 0.5);
+      @media (any-hover: hover) {
+        &:hover {
+          color: rgba($color: $color__green, $alpha: 0.5);
+        }
+      }
+    }
+  }
+
+  &__link {
+  }
+
+  &__text {
+  }
+}
+//==========================================================================================================================================
+
+//====================================================================================================

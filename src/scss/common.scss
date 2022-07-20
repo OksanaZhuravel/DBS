@@ -1,0 +1,17 @@
+// Заголовки, общие БЄМ блоки и проче...
+.button {
+}
+.logo {
+  &__link {
+    display: block;
+    &--footer {
+      img {
+        width: rem(155);
+        @media (min-width: $mobile) {
+          width: rem(200);
+          height: rem(65);
+        }
+      }
+    }
+  }
+}

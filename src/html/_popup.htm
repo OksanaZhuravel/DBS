@@ -1,0 +1,36 @@
+<div id="feedback" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close icon-popup"></button>
+      <div class="popup__text">
+        <form data-dev class="form" id="form" data-popup-message="#form-message">
+          <h2 class="form__title">Получить тестовый доступ</h2>
+          <div class="form__item">
+            <input data-required="email" type="text" name="email" placeholder="Укажите вашу почту*" class="form__input"
+              data-error="Укажите Вашу Почту">
+          </div>
+          <div class="checkbox form__item ">
+            <input data-required id="c_1" class="checkbox__input" type="checkbox" value="получено" checked
+              name="agreement">
+            <label for="c_1" class="checkbox__label"><span class="checkbox__text">Даю согласие на обработку
+                персональных данных</span></label>
+          </div>
+          <div class="form__buttons">
+            <button type="submit" class="button">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="form-message" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close icon-popup"></button>
+      <div class="popup__title"> Ваша заявка отправленна.</div>
+      <div class="popup__text"> Ожидайте обратную связь от нас.</div>
+    </div>
+  </div>
+</div>
