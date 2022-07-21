@@ -9,10 +9,16 @@
   border: solid 1px $color__green;
   font-size: rem(14);
   letter-spacing: 0.44px;
+  transition: border 0.6s ease 0s, background-color 0.6s ease 0s;
   @media (any-hover: hover) {
     &:hover {
       border: solid 1px $color__yellow;
+      background-color: $Very-dark-blue;
     }
+  }
+  &._active {
+    border: solid 1px $color__red;
+    background-color: $Very-dark-blue;
   }
   &._fw {
     width: 100%;

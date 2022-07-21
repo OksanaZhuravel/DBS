@@ -3,6 +3,10 @@
 .page {
   &__about {
   }
+  &__cause {
+  }
+  &__purchasing {
+  }
 }
 //==========================================================================================================================================
 .about {
@@ -21,8 +25,7 @@
 
   &__title {
     font-weight: 300;
-    font-size: rem(72);
-
+    @include adaptiveValue('font-size', 72, 65);
     &:not(:last-child) {
       @include adaptiveValue('margin-bottom', 30, 24);
     }
@@ -38,46 +41,105 @@
   &__text {
     font-size: rem(26);
     font-weight: 300;
-    // line-height: 1.2;
     &--bold {
       font-weight: 700;
     }
   }
 
   &__wrap {
+    margin: auto;
     display: grid;
-    justify-items: center;
-    gap: rem(24);
+    row-gap: rem(20);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'virt'
+      'digital'
+      'service'
+      'portals';
+    @media (min-width: $mobile) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: rem(20);
+      grid-template-areas:
+        'virt digital'
+        'service portals';
+    }
+    @media (min-width: $tablet) {
+      grid-template-columns: 1fr minmax(244px, 1fr) 1fr;
+      max-width: rem(1140);
+      column-gap: 0;
+      grid-template-areas:
+        'virt box service'
+        'digital box portals';
+    }
+  }
+
+  &__central {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__inner {
+    width: 100%;
+    position: relative;
+    height: 350px;
+    border: solid;
+    border-color: $border;
+    border-left: 1px;
+    border-right: 1px;
+  }
+
+  &__line {
+    height: 100%;
+    width: 1px;
+    background-color: $mainColor;
+    position: absolute;
+    left: 50%;
   }
 
   &__cart {
   }
-
-  &__logo {
+  &__box {
+    grid-area: box;
     display: none;
-    @media (min-width: $mobile) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      width: 244px;
-      height: 244px;
-      border: solid 1px $border;
-      box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.1);
-      background-color: $LightGray;
+    @media (min-width: $tablet) {
+      display: block;
     }
+  }
+  &__logo {
+    z-index: 10;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: rem(244);
+    height: rem(244);
+    border: solid 1px $border;
+    box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.1);
+    background-color: $LightGray;
   }
 }
 //==========================================================================================================================================
 
 .cart {
-  min-width: rem(272);
   min-height: rem(342);
   padding: rem(36) rem(20) 0 rem(20);
   border-radius: 20px;
-  // box-shadow: 0 0 36px 0 rgba(67, 76, 82, 0.1);
   box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.1);
   background-color: $LightGray;
+  transition: transform 0.3s ease 0.3s;
+  @media (any-hover: hover) {
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+  @media (min-width: $mobile) {
+    min-height: rem(330);
+  }
   &__title {
     margin: rem(24) 0 rem(2) 0;
     color: $Very-dark-blue;
@@ -90,17 +152,16 @@
 
   &__text {
     font-family: 'Roboto', sans-serif;
-
     color: $dark__text;
     line-height: math.div(22, 16);
     font-size: rem(16);
   }
   &::before {
     content: '';
-
     display: block;
   }
   &--virt {
+    grid-area: virt;
     &::before {
       width: rem(90);
       height: rem(70);
@@ -108,6 +169,7 @@
     }
   }
   &--digital {
+    grid-area: digital;
     &::before {
       width: rem(68);
       height: rem(71);
@@ -115,6 +177,7 @@
     }
   }
   &--service {
+    grid-area: service;
     &::before {
       width: rem(86);
       height: rem(71);
@@ -122,6 +185,7 @@
     }
   }
   &--portals {
+    grid-area: portals;
     &::before {
       width: rem(72);
       height: rem(72);
@@ -131,3 +195,188 @@
 }
 
 //====================================================================================================
+
+.cause {
+  padding: rem(48) 0 rem(110) 0;
+  background-color: $bag;
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+  }
+  @media (min-width: $mobile) {
+    padding: rem(31) 0;
+  }
+  @media (max-width: $mobile) {
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      height: rem(324);
+      object-fit: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 1;
+    }
+    &::after {
+      right: 0;
+      height: rem(324);
+      width: rem(46);
+      background-image: url('@img/main/cause/comps-right.png');
+    }
+    &::before {
+      left: 0;
+      width: rem(67);
+      background-image: url('@img/main/cause/comps-left.png');
+    }
+  }
+  &__container {
+    justify-items: center;
+    z-index: 3;
+    position: relative;
+    display: grid;
+    padding: 0;
+    @include adaptiveValue('column-gap', 117, 20);
+    @media (min-width: $mobile) {
+      padding-left: 0;
+      padding-right: rem(24);
+      grid-template-columns: rem(250) 1fr;
+    }
+    @media (min-width: $tablet) {
+      max-width: none;
+      grid-template-columns: rem(382) 1fr;
+    }
+    @media (min-width: rem(1441)) {
+      max-width: rem($maxWidthContainer);
+    }
+  }
+  &__img {
+    @media (min-width: $mobile) {
+      height: rem(366);
+      width: rem(250);
+      background: url('@img/main/cause/comps.png') center / cover no-repeat;
+    }
+    @media (min-width: $tablet) {
+      width: rem(382);
+      height: rem(559);
+    }
+  }
+  &__body {
+    max-width: rem(300);
+    display: grid;
+    align-content: center;
+    text-align: center;
+    justify-items: center;
+    gap: rem(15);
+    @media (min-width: $mobile) {
+      max-width: none;
+      gap: 0;
+      text-align: left;
+      justify-items: left;
+    }
+  }
+
+  &__title {
+    max-width: rem(250);
+    font-weight: 300;
+    font-stretch: condensed;
+    color: $Very-dark-blue;
+    @include adaptiveValue('font-size', 72, 48);
+    line-height: math.div(60, 48);
+    &--bold {
+      font-weight: 700;
+    }
+    &--color {
+      font-weight: 700;
+      color: $color__green;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+    @media (min-width: $mobile) {
+      max-width: none;
+      &:not(:last-child) {
+        margin-bottom: rem(10);
+      }
+    }
+  }
+
+  &__subtitle {
+    max-width: rem(270);
+    font-stretch: condensed;
+    @include adaptiveValue('font-size', 26, 22);
+    font-weight: 300;
+    color: $color__green;
+    &:not(:last-child) {
+      margin-bottom: rem(51);
+    }
+    @media (min-width: $mobile) {
+      max-width: rem(710);
+      &:not(:last-child) {
+        margin-bottom: rem(40);
+      }
+    }
+  }
+
+  &__text {
+    font-family: 'Roboto';
+    font-size: rem(16);
+    line-height: math.div(22, 16);
+    max-width: rem(463);
+  }
+}
+//==========================================================================================================================================
+.purchasing {
+  @include adaptiveValue('padding-top', 110, 48);
+  @include adaptiveValue('padding-bottom', 80, 66);
+  background-color: $Back;
+
+  &__container {
+    display: grid;
+  }
+
+  &__title {
+    justify-self: center;
+    max-width: rem(950);
+    text-align: center;
+    color: $Very-dark-blue;
+    font-weight: 300;
+    @include adaptiveValue('font-size', 72, 48);
+    @include adaptiveValue('margin-bottom', 90, 48);
+    &--bold {
+      font-weight: 700;
+    }
+
+    &--color {
+      color: $color__green;
+      font-weight: 700;
+    }
+  }
+
+  &__slider {
+  }
+
+  &__wrapper {
+  }
+
+  &__slide {
+  }
+
+  &__wrap {
+    display: flex;
+    padding: rem(44) rem(20) 0 rem(20);
+    width: rem(272);
+    height: rem(367);
+    border-radius: 20px;
+    box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.1);
+    background-color: $bag;
+
+    @media (min-width: $mobile) {
+      width: rem(367);
+    }
+  }
+}
+//==========================================================================================================================================

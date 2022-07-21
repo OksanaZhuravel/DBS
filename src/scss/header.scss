@@ -3,6 +3,7 @@
   background-color: $dark__grey__blue;
   max-height: rem(90);
   &__container {
+    padding: 0 rem(10);
     background-color: $dark__grey__blue;
     text-transform: uppercase;
     color: $bag;
@@ -12,6 +13,7 @@
     min-height: rem(90);
     grid-template-columns: 1fr rem(50);
     @media (min-width: $mobile) {
+      padding: 0 rem(5);
       grid-template-columns: rem(150) minmax(min-content, 1fr) rem(155);
       justify-items: center;
     }
@@ -44,15 +46,11 @@
     top: rem(70);
     right: -100%;
     overflow: auto;
-
     background-color: $dark__grey__blue;
     padding: rem(15) rem(15);
     transition: right 0.3s ease 0s;
     z-index: 3;
-    // @media (min-width: $mobile) {
-    //   padding: rem(30) rem(50);
-    //   top: rem(110);
-    // }
+
     &::before {
       content: '';
       position: fixed;
@@ -88,6 +86,36 @@
 
   &__link {
     padding: 0 0 rem(5) 0;
+
+    &::after {
+      content: '';
+      display: block;
+      width: rem(0);
+      height: rem(4);
+      margin: rem(10) 0 0 0;
+      background-color: $color__yellow;
+      transition: width 0.6s ease 0s;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        &::after {
+          width: 35%;
+          @media (min-width: $mobile) {
+            width: 100%;
+          }
+        }
+      }
+    }
+    &._active {
+      &::after {
+        width: 35%;
+        background-color: $color__red;
+        @media (min-width: $mobile) {
+          width: 100%;
+          background-color: $color__red;
+        }
+      }
+    }
   }
 }
 
