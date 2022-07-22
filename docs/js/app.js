@@ -3852,16 +3852,18 @@
             modules: [ Navigation, Pagination ],
             observer: true,
             observeParents: true,
-            slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 25,
             speed: 800,
+            slidesPerView: "auto",
+            centeredSlides: true,
+            watchOverflow: true,
             keyboard: {
                 enabled: true,
                 onlyInViewport: true,
                 pageUpDown: true
             },
             pagination: {
-                el: ".swiper-pagination",
+                el: ".purchasing__pagination",
                 clickable: true,
                 type: "fraction",
                 renderFraction: function(currentClass) {
@@ -3869,8 +3871,8 @@
                 }
             },
             navigation: {
-                prevEl: ".swiper-button-prev",
-                nextEl: ".swiper-button-next"
+                prevEl: ".purchasing__button--prev",
+                nextEl: ".purchasing__button--next"
             },
             on: {}
         });

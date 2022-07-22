@@ -17,9 +17,9 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-// import '../../scss/base/swiper.scss';
+import '../../scss/base/swiper.scss';
 // Полный набор стилей из scss/libs/swiper.scss
-import '../../scss/libs/swiper.scss';
+// import '../../scss/libs/swiper.scss';
 // Полный набор стилей из node_modules
 // import 'swiper/css';
 
@@ -37,37 +37,19 @@ function initSliders() {
       modules: [Navigation, Pagination],
       observer: true,
       observeParents: true,
-      slidesPerView: 2,
-      spaceBetween: 20,
-      // autoHeight: true,
+      spaceBetween: 25,
       speed: 800,
-      // slidesPerView: 'auto',
-      // centeredSlides: true,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      watchOverflow: true,
 
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      //preloadImages: false,
-      //lazy: true,
       keyboard: {
         enabled: true,
         onlyInViewport: true,
         pageUpDown: true,
       },
-
-      /*
-			// Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
-
-      // Пагинация
-
       pagination: {
-        el: '.swiper-pagination',
+        el: '.purchasing__pagination',
         clickable: true,
         type: 'fraction',
         renderFraction: function (currentClass) {
@@ -85,8 +67,8 @@ function initSliders() {
 
       // Кнопки "влево/вправо"
       navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
+        prevEl: '.purchasing__button--prev',
+        nextEl: '.purchasing__button--next',
       },
 
       // Брейкпоинты
@@ -96,14 +78,14 @@ function initSliders() {
       //     slidesPerView: 1,
       //     spaceBetween: 24,
       //   },
-      //   // 768: {
-      //   //   slidesPerView: 2.2,
-      //   //   spaceBetween: 20,
-      //   // },
-      //   // 992: {
-      //   //   slidesPerView: 3.5,
-      //   //   spaceBetween: 20,
-      //   // },
+      //   768: {
+      //     slidesPerView: 2,
+      //     spaceBetween: 20,
+      //   },
+      //   992: {
+      //     slidesPerView: 3.2,
+      //     spaceBetween: 20,
+      //   },
       //   1268: {
       //     slidesPerView: 'auto',
       //     spaceBetween: 20,
