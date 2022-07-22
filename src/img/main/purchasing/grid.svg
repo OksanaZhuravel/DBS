@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="115px" height="114px" viewBox="0 0 115 114" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon__grid</title>
+    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-2442.000000, -43.000000)">
+            <g id="icon__grid" transform="translate(2443.000000, 44.000000)">
+                <polygon id="Stroke-5" stroke="#434C52" points="9.33333327e-05 112 112.933427 112 112.933427 28 9.33333327e-05 28"></polygon>
+                <polygon id="Stroke-1" stroke="#00B948" points="9.33333327e-05 28 28.0000933 28 28.0000933 0 9.33333327e-05 0"></polygon>
+                <polygon id="Stroke-3" stroke="#434C52" points="28.0000933 28 56.0000933 28 56.0000933 0 28.0000933 0"></polygon>
+                <polygon id="Stroke-7" stroke="#00B948" points="28.0000933 56 56.0000933 56 56.0000933 28 28.0000933 28"></polygon>
+                <polygon id="Stroke-8" stroke="#00B948" points="9.33333327e-05 84 28.0000933 84 28.0000933 56 9.33333327e-05 56"></polygon>
+                <polygon id="Stroke-11" stroke="#00B948" points="9.33333327e-05 112 28.0000933 112 28.0000933 84 9.33333327e-05 84"></polygon>
+                <line x1="0" y1="84" x2="70" y2="84" id="Stroke-14" stroke="#00B948"></line>
+                <line x1="0" y1="56" x2="70" y2="56" id="Stroke-15" stroke="#00B948"></line>
+                <line x1="84" y1="84" x2="98.9333333" y2="84" id="Stroke-17" stroke="#00B948"></line>
+                <line x1="84" y1="56" x2="98.9333333" y2="56" id="Stroke-18" stroke="#00B948"></line>
+                <polygon id="Stroke-10" stroke="#00B948" points="28.0000933 84 56.0000933 84 56.0000933 56 28.0000933 56"></polygon>
+                <polygon id="Stroke-4" stroke="#D51130" fill="#D51130" points="9.33333327e-05 56 28.0000933 56 28.0000933 28 9.33333327e-05 28"></polygon>
+                <polygon id="Stroke-13" stroke="#FFD109" points="28.0000933 112 56.0000933 112 56.0000933 84 28.0000933 84"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

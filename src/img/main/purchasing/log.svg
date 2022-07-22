@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="115px" height="72px" viewBox="0 0 115 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon__log</title>
+    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-2061.000000, -58.000000)">
+            <g id="icon__log" transform="translate(2061.000000, 59.000000)">
+                <path d="M92.3483148,23.2650623 C92.3483148,35.3996197 82.5106754,45.237259 70.376118,45.237259 C58.2424787,45.237259 48.4048393,35.3996197 48.4048393,23.2650623 C48.4048393,11.1305049 58.2424787,1.29378361 70.376118,1.29378361 C82.5106754,1.29378361 92.3483148,11.1305049 92.3483148,23.2650623 Z" id="Stroke-1" stroke="#009640"></path>
+                <line x1="112" y1="68.5607082" x2="83.8742295" y2="40.4349377" id="Stroke-3" stroke="#434C52" stroke-width="6"></line>
+                <line x1="0" y1="0.459016393" x2="27.8742295" y2="0.459016393" id="Stroke-5" stroke="#D51130"></line>
+                <line x1="0" y1="32.172918" x2="27.8742295" y2="32.172918" id="Stroke-8" stroke="#434C52"></line>
+                <line x1="0" y1="63.8871869" x2="60.9234098" y2="63.8871869" id="Stroke-10" stroke="#FFD109"></line>
+            </g>
+        </g>
+    </g>
+</svg>
