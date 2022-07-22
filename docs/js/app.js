@@ -3852,9 +3852,9 @@
             modules: [ Navigation, Pagination ],
             observer: true,
             observeParents: true,
+            slidesPerView: 2,
             spaceBetween: 20,
             speed: 800,
-            slidesPerView: "auto",
             keyboard: {
                 enabled: true,
                 onlyInViewport: true,
@@ -3863,21 +3863,14 @@
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
-                type: "fraction"
+                type: "fraction",
+                renderFraction: function(currentClass) {
+                    return '<span class="' + currentClass + '"></span>';
+                }
             },
             navigation: {
                 prevEl: ".swiper-button-prev",
                 nextEl: ".swiper-button-next"
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 24
-                },
-                1268: {
-                    slidesPerView: "auto",
-                    spaceBetween: 20
-                }
             },
             on: {}
         });

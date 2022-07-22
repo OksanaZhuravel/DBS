@@ -17,9 +17,9 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-import '../../scss/base/swiper.scss';
+// import '../../scss/base/swiper.scss';
 // Полный набор стилей из scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+import '../../scss/libs/swiper.scss';
 // Полный набор стилей из node_modules
 // import 'swiper/css';
 
@@ -37,11 +37,11 @@ function initSliders() {
       modules: [Navigation, Pagination],
       observer: true,
       observeParents: true,
-      // slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 20,
       // autoHeight: true,
       speed: 800,
-      slidesPerView: 'auto',
+      // slidesPerView: 'auto',
       // centeredSlides: true,
 
       //touchRatio: 0,
@@ -70,6 +70,9 @@ function initSliders() {
         el: '.swiper-pagination',
         clickable: true,
         type: 'fraction',
+        renderFraction: function (currentClass) {
+          return '<span class="' + currentClass + '"></span>';
+        },
       },
 
       // Скроллбар
@@ -88,24 +91,24 @@ function initSliders() {
 
       // Брейкпоинты
 
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 24,
-        },
-        // 768: {
-        //   slidesPerView: 2.2,
-        //   spaceBetween: 20,
-        // },
-        // 992: {
-        //   slidesPerView: 3.5,
-        //   spaceBetween: 20,
-        // },
-        1268: {
-          slidesPerView: 'auto',
-          spaceBetween: 20,
-        },
-      },
+      // breakpoints: {
+      //   320: {
+      //     slidesPerView: 1,
+      //     spaceBetween: 24,
+      //   },
+      //   // 768: {
+      //   //   slidesPerView: 2.2,
+      //   //   spaceBetween: 20,
+      //   // },
+      //   // 992: {
+      //   //   slidesPerView: 3.5,
+      //   //   spaceBetween: 20,
+      //   // },
+      //   1268: {
+      //     slidesPerView: 'auto',
+      //     spaceBetween: 20,
+      //   },
+      // },
 
       // События
       on: {},
