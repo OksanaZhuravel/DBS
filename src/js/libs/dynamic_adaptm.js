@@ -5,20 +5,20 @@
 // https://www.youtube.com/c/freelancerlifestyle
 
 'use strict';
-function DynamicAdapt(type) {
+function DynamicAdaptM(type) {
   this.type = type;
 }
-DynamicAdapt.prototype.init = function () {
+DynamicAdaptM.prototype.init = function () {
   const _this = this;
   // массив объектов
   this.оbjects = [];
   this.daClassname = '_dynamic_adapt_';
   // массив DOM-элементов
-  this.nodes = document.querySelectorAll('[data-da]');
+  this.nodes = document.querySelectorAll('[data-damax]');
   // наполнение оbjects объктами
   for (let i = 0; i < this.nodes.length; i++) {
     const node = this.nodes[i];
-    const data = node.dataset.da.trim();
+    const data = node.dataset.damax.trim();
     const dataArray = data.split(',');
     const оbject = {};
     оbject.element = node;
@@ -71,7 +71,7 @@ DynamicAdapt.prototype.init = function () {
     this.mediaHandler(matchMedia, оbjectsFilter);
   }
 };
-DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
+DynamicAdaptM.prototype.mediaHandler = function (matchMedia, оbjects) {
   if (matchMedia.matches) {
     for (let i = 0; i < оbjects.length; i++) {
       const оbject = оbjects[i];
@@ -89,7 +89,7 @@ DynamicAdapt.prototype.mediaHandler = function (matchMedia, оbjects) {
   }
 };
 // Функция перемещения
-DynamicAdapt.prototype.moveTo = function (place, element, destination) {
+DynamicAdaptM.prototype.moveTo = function (place, element, destination) {
   element.classList.add(this.daClassname);
   if (place === 'last' || place >= destination.children.length) {
     destination.insertAdjacentElement('beforeend', element);
@@ -102,7 +102,7 @@ DynamicAdapt.prototype.moveTo = function (place, element, destination) {
   destination.children[place].insertAdjacentElement('beforebegin', element);
 };
 // Функция возврата
-DynamicAdapt.prototype.moveBack = function (parent, element, index) {
+DynamicAdaptM.prototype.moveBack = function (parent, element, index) {
   element.classList.remove(this.daClassname);
   if (parent.children[index] !== undefined) {
     parent.children[index].insertAdjacentElement('beforebegin', element);
@@ -111,14 +111,14 @@ DynamicAdapt.prototype.moveBack = function (parent, element, index) {
   }
 };
 // Функция получения индекса внутри родителя
-DynamicAdapt.prototype.indexInParent = function (parent, element) {
+DynamicAdaptM.prototype.indexInParent = function (parent, element) {
   const array = Array.prototype.slice.call(parent.children);
   return Array.prototype.indexOf.call(array, element);
 };
 // Функция сортировки массива по breakpoint и place
 // по возрастанию для this.type = min
 // по убыванию для this.type = max
-DynamicAdapt.prototype.arraySort = function (arr) {
+DynamicAdaptM.prototype.arraySort = function (arr) {
   if (this.type === 'min') {
     Array.prototype.sort.call(arr, function (a, b) {
       if (a.breakpoint === b.breakpoint) {
@@ -162,5 +162,5 @@ DynamicAdapt.prototype.arraySort = function (arr) {
     return;
   }
 };
-const da = new DynamicAdapt('min');
-da.init();
+const damax = new DynamicAdaptM('max');
+damax.init();

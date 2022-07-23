@@ -1,6 +1,5 @@
 // Заголовки, общие БЄМ блоки и проче...
-.button {
-}
+
 .logo {
   &__link {
     display: block;
@@ -12,20 +11,6 @@
           height: rem(65);
         }
       }
-    }
-  }
-}
-.swiper {
-  &-wrapper {
-  }
-  &-slide {
-  }
-  &-pagination {
-  }
-  &-button {
-    &-prev {
-    }
-    &-next {
     }
   }
 }
