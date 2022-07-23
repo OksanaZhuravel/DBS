@@ -4,7 +4,7 @@
 @import 'base/mixins';
 
 // Подключение шрифтов ===========================================================================================================================================================================================================================================================================
-@import url(https://fonts.googleapis.com/css?family=Roboto:400&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Koulen:400&display=swap);
 //&display=swap - добавить при подключении через плагин
@@ -43,10 +43,10 @@ $maxWidthContainer: 1134;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 48;
-
+$containerPaddingAbout: 612;
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
-
+$containerWidthAbout: $maxWidthContainer + $containerPaddingAbout;
 // Брейк-поинты
 $pc: em(
   $containerWidth
@@ -108,6 +108,13 @@ body {
       padding: 0 rem(math.div($containerPadding, 2));
     }
   }
+  [class='about__container'] {
+    @if ($maxWidthContainer>0) {
+    }
+    @if ($containerPaddingAbout>0) {
+      padding: 0 rem(math.div($containerPaddingAbout, 2));
+    }
+  }
 } @else {
   // По брейк-поинтам
   [class*='__container'] {
@@ -147,4 +154,28 @@ body {
 @import 'footer';
 
 // Подключение стилей  страниц
+
 @import 'main';
+@import 'solutions';
+@import 'about';
+@import 'prices';
+.page {
+  &-prices {
+  }
+  &-solutions {
+  }
+  &-about {
+  }
+  &__application {
+  }
+  &__cause {
+  }
+  &__purchasing {
+    position: relative;
+    z-index: 2;
+  }
+  &__company {
+  }
+  &__work {
+  }
+}

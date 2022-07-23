@@ -2,6 +2,8 @@
 .header {
   background-color: $dark__grey__blue;
   max-height: rem(90);
+  position: relative;
+  z-index: 10;
   &__container {
     padding: 0 rem(10);
     background-color: $dark__grey__blue;

@@ -1,0 +1,85 @@
+//==========================================================================================================================================
+.about {
+  background-color: $Back;
+  @include adaptiveValue('padding-top', 190, 37);
+  @include adaptiveValue('padding-bottom', 147, 48);
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    // height: rem(875);
+    height: 100%;
+    // @include adaptiveValue('top', -190, -37);
+    // top: 0;
+    bottom: 80%;
+    left: 0;
+    z-index: 1;
+    background: url('@img/general/mosaic.svg') bottom / cover no-repeat;
+    // background-size: contain;
+  }
+  @media (max-width: $mobile) {
+    &::after {
+      height: 0;
+    }
+  }
+  &__container {
+    background-color: $Back;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    @media (max-width: $mobile) {
+      padding: 0 rem(10);
+    }
+    @media (max-width: $tablet) {
+      padding: 0 rem(30);
+    }
+  }
+
+  &__title {
+    @include adaptiveValue('font-size', 72, 38);
+    white-space: nowrap;
+    line-height: math.div(52, 48);
+    font-weight: 300;
+    color: $Very-dark-blue;
+    font-stretch: condensed;
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 78, 46);
+    }
+  }
+
+  &__text {
+    font-family: 'Roboto';
+    line-height: math.div(24, 17);
+    font-size: rem(17);
+    margin-bottom: rem(14);
+    &--bold {
+      font-weight: 700;
+      color: $dark__grey__blue;
+    }
+  }
+
+  &__body {
+    @include adaptiveValue('padding-top', 40, 40);
+    @include adaptiveValue('padding-bottom', 96, 42);
+    justify-self: end;
+  }
+
+  &__content {
+    @include adaptiveValue('padding-left', 20, 5);
+    border-left: solid 1px $color__green;
+    max-width: rem(560);
+    font-size: rem(26);
+    line-height: math.div(35, 26);
+    font-stretch: condensed;
+    font-weight: 300;
+  }
+
+  &__logo {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+//==========================================================================================================================================
