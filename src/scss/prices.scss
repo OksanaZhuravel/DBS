@@ -1,0 +1,180 @@
+//==========================================================================================================================================
+
+.prices {
+  background-color: $Back;
+  @include adaptiveValue('padding-top', 190, 37);
+  @include adaptiveValue('padding-bottom', 113, 48);
+  position: relative;
+  display: grid;
+  justify-items: center;
+
+  @media (min-width: $mobile) {
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      max-height: rem(80);
+      position: absolute;
+      background-image: url('@img/general/mosaic.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center bottom;
+    }
+  }
+  @media (min-width: $tablet) {
+    &::before {
+      max-height: rem(190);
+      max-width: rem(752);
+    }
+  }
+
+  &__container {
+    display: grid;
+    position: relative;
+    z-index: 2;
+    @media (max-width: $mobile) {
+      padding: 0 rem(10);
+    }
+    @media (max-width: $tablet) {
+      padding: 0 rem(30);
+    }
+  }
+
+  &__title {
+    @include adaptiveValue('font-size', 72, 38);
+    white-space: nowrap;
+    font-stretch: condensed;
+    font-weight: 700;
+    color: $color__green;
+    &--color {
+      font-weight: 300;
+      color: $dark__grey__blue;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__text {
+    line-height: math.div(35, 26);
+    font-size: rem(26);
+    font-weight: 300;
+    color: $Very-dark-blue;
+    &--bold {
+      font-weight: 700;
+    }
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 96, 46);
+    }
+  }
+
+  &__subtitle {
+    @include adaptiveValue('font-size', 26, 22);
+
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $Very-dark-blue;
+    font-stretch: condensed;
+    &:not(:last-child) {
+      margin-bottom: rem(18);
+    }
+  }
+
+  &__excerpt {
+    font-family: 'Roboto';
+    line-height: math.div(24, 17);
+    font-size: rem(17);
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+    &--bottom {
+      margin-top: rem(40);
+    }
+  }
+
+  &__slogan {
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $dark__grey__blue;
+    line-height: math.div(24, 17);
+    font-size: rem(17);
+    &:not(:last-child) {
+      margin-bottom: rem(46);
+    }
+  }
+}
+.projects {
+  &__navigation {
+    ._tab-spoller & {
+      display: none;
+    }
+  }
+  &__content {
+  }
+  &__title {
+    font-weight: 700;
+    line-height: math.div(24, 18);
+    font-size: rem(18);
+    text-transform: uppercase;
+    padding: rem(18) rem(20);
+    background-color: $LightGray2;
+    border: solid 1px transparent;
+    width: 100%;
+    @media (min-width: $mobile) {
+      width: max-content;
+    }
+    &._tab-active {
+      font-weight: 700;
+      color: $LightGray;
+      background-color: $color__green;
+      border: solid 1px $color__green;
+    }
+  }
+
+  &__body {
+    // display: grid;
+    padding: rem(24) rem(10);
+    font-family: 'Roboto';
+    line-height: math.div(24, 17);
+    font-size: rem(17);
+    background-color: $LightGray;
+    @media (min-width: $mobile) {
+      padding: rem(48) rem(40);
+    }
+  }
+
+  &__text {
+    color: $color__green;
+    &--color {
+      color: $dark__grey__blue;
+      font-weight: 700;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(48);
+    }
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    color: $dark__grey__blue;
+    font-weight: 700;
+  }
+  &__desc {
+    max-width: rem(500);
+    margin-top: rem(6);
+    @include adaptiveValue('padding-left', 20, 5);
+    border-left: solid 1px $color__green;
+    &:not(:last-child) {
+      margin-bottom: rem(31);
+    }
+  }
+
+  &__prices {
+    text-transform: uppercase;
+    color: $dark__grey__blue;
+    font-weight: 700;
+    @include adaptiveValue('font-size', 17, 15);
+  }
+}
+//==========================================================================================================================================

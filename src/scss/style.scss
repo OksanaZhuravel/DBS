@@ -40,13 +40,14 @@ $minWidth: 320;
 $maxWidth: 1366;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
 $maxWidthContainer: 1134;
+$maxWidthContainerAbout: 752;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 48;
 $containerPaddingAbout: 612;
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
-$containerWidthAbout: $maxWidthContainer + $containerPaddingAbout;
+$containerWidthAbout: $maxWidthContainerAbout + $containerPaddingAbout;
 // Брейк-поинты
 $pc: em(
   $containerWidth
@@ -109,7 +110,16 @@ body {
     }
   }
   [class='about__container'] {
-    @if ($maxWidthContainer>0) {
+    @if ($maxWidthContainerAbout>0) {
+      max-width: rem($maxWidthContainerAbout);
+    }
+    @if ($containerPaddingAbout>0) {
+      padding: 0 rem(math.div($containerPaddingAbout, 2));
+    }
+  }
+  [class='prices__container'] {
+    @if ($maxWidthContainerAbout>0) {
+      max-width: rem($maxWidthContainerAbout);
     }
     @if ($containerPaddingAbout>0) {
       padding: 0 rem(math.div($containerPaddingAbout, 2));
