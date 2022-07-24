@@ -5,7 +5,7 @@
   display: inline-flex;
   background-color: transparent;
   padding: rem(12) rem(16);
-  border-radius: 4px;
+  border-radius: 3px;
   border: solid 1px $color__green;
   font-size: rem(14);
   letter-spacing: 0.44px;
@@ -22,5 +22,19 @@
   }
   &._fw {
     width: 100%;
+  }
+  &--access {
+    padding: rem(18) rem(55);
+    font-size: rem(21);
+    color: $bag;
+    background-color: $color__green;
+    box-shadow: 0 0 36px 0 rgba($color: $dark__text, $alpha: 0.5);
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: transparent;
+        background-color: rgba($color: $color__green, $alpha: 0.8);
+        box-shadow: 0 0 36px 0 rgba($color: $dark__text, $alpha: 0.8);
+      }
+    }
   }
 }

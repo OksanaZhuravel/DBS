@@ -1,1 +1,352 @@
 //====================================================================================================
+.main {
+  @include adaptiveValue('padding-top', 186, 40);
+  // @include adaptiveValue('padding-bottom', 180, 40);
+  background-color: $Back;
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    width: rem(100);
+    height: rem(100);
+    border-radius: rem(10);
+    background-color: $color__green;
+    position: absolute;
+    top: -7%;
+    right: -7%;
+    transform: rotate(45deg);
+    z-index: 1;
+    @media (min-width: $mobile) {
+      width: rem(233);
+      height: rem(233);
+    }
+    @media (min-width: $tablet) {
+      top: -5%;
+      right: 0;
+    }
+  }
+  &__container {
+    @include adaptiveValue('padding-bottom', 180, 40);
+    position: relative;
+    z-index: 2;
+    display: grid;
+    justify-items: start;
+  }
+
+  &__title {
+    color: $Very-dark-blue;
+    font-weight: 300;
+    @include adaptiveValue('font-size', 65, 38);
+    line-height: math.div(72, 65);
+    // @include adaptiveValue('margin-bottom', 30, 24);
+    font-stretch: condensed;
+    &--bold {
+      font-weight: 700;
+    }
+
+    &--color {
+      color: $color__green;
+      font-weight: 700;
+    }
+  }
+  &__process {
+  }
+}
+
+.process {
+  background-color: $bag;
+  @include adaptiveValue('padding-top', 52, 30);
+  @include adaptiveValue('padding-bottom', 152, 40);
+  &__container {
+    display: grid;
+    align-items: center;
+    gap: rem(20);
+    @media (min-width: $mobile) {
+      grid-template-columns: rem(465) 1fr;
+    }
+  }
+  &__body {
+    font-size: rem(26);
+    color: $Very-dark-blue;
+    line-height: math.div(35, 26);
+    font-weight: 300;
+    padding-left: rem(20);
+    border-left: solid 1px $color__green;
+  }
+
+  &__img {
+    padding-bottom: percent(1130, 1465);
+    img {
+      display: block;
+    }
+  }
+}
+//==========================================================================================================================================
+.implementation {
+  background-color: $Back;
+  // @include adaptiveValue('padding-bottom', 55, 12);
+  @media (min-width: $mobile) {
+    margin-top: rem(-83);
+  }
+  &__container {
+    display: grid;
+    justify-content: center;
+  }
+  &__decor {
+    padding: rem(20);
+    display: grid;
+    align-items: center;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 36px 0 rgba($color: $dark__text, $alpha: 0.1);
+    background-color: $dark__text;
+
+    img {
+      display: none;
+      @media (min-width: $tablet) {
+        display: block;
+      }
+    }
+    @media (min-width: $mobile) {
+      // min-height: rem(320);
+      padding: rem(40) rem(20);
+      grid-template-columns: 1fr minmax(rem(540), 1fr);
+      img {
+        grid-column: 1/2;
+        top: rem(-40);
+      }
+    }
+    @media (min-width: $tablet) {
+      min-height: rem(362);
+    }
+  }
+  &__inner {
+    grid-column: 2/3;
+  }
+  &__title {
+    font-weight: 300;
+    @include adaptiveValue('font-size', 38, 26);
+    color: $bag;
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+    &--bold {
+      font-weight: 700;
+      color: $dark;
+      @media (min-width: $mobile) {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__body {
+  }
+}
+
+.element {
+  padding: rem(10);
+  @media (min-width: $tablet) {
+    margin-top: rem(-110);
+    padding: 0 rem(20);
+  }
+  &__list {
+    display: grid;
+    gap: rem(21);
+    counter-reset: myCount;
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    width: auto;
+    font-family: 'Roboto';
+    color: $dark__text;
+    font-size: rem(17);
+    counter-increment: myCount;
+    list-style-type: none;
+    position: relative;
+    &:before {
+      content: '0' counter(myCount);
+      position: absolute;
+      font-size: rem(16);
+      top: rem(130);
+      left: rem(22);
+      border: solid 1px $color__green;
+      padding: rem(4);
+      width: rem(26);
+      height: rem(26);
+    }
+    &::after {
+      content: '';
+      display: block;
+      border: solid 1px $LightGray2;
+      width: rem(26);
+      height: rem(26);
+      position: absolute;
+      top: rem(95);
+      left: rem(22);
+    }
+  }
+
+  &__body {
+    display: grid;
+    gap: rem(24);
+    padding: rem(25) rem(22);
+    // width: rem(275);
+    // min-height: rem(275);
+    border-radius: 20px;
+    box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.1);
+    background-color: $bag;
+    transition: box-shadow 0.3s ease 0s;
+
+    &::after {
+      content: '';
+      display: block;
+      border: solid 1px $LightGray2;
+      width: rem(26);
+      height: rem(26);
+      position: absolute;
+      top: rem(130);
+      left: rem(57);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.5);
+      }
+    }
+    @media (min-width: $mobile) {
+      // max-height: rem(353);
+      // max-width: rem(353);
+    }
+  }
+
+  &__img {
+    display: block;
+    padding-bottom: percent(40, 160);
+    &-ibg {
+    }
+    &-contain {
+    }
+  }
+
+  &__title {
+    font-family: 'Roboto Condensed';
+    color: $Very-dark-blue;
+    text-transform: uppercase;
+    font-size: rem(38);
+    font-weight: 700;
+    font-stretch: condensed;
+    text-align: center;
+  }
+
+  &__text {
+    line-height: math.div(24, 17);
+    @media (min-width: $mobile) {
+      border-left: solid 1px $color__green;
+      padding-left: rem(20);
+    }
+  }
+}
+//==========================================================================================================================================
+
+.platform {
+  @include adaptiveValue('padding-top', 48, 24);
+  @include adaptiveValue('padding-bottom', 33, 24);
+  background-color: $Back;
+  &__container {
+  }
+
+  &__body {
+    display: grid;
+    gap: rem(14);
+    @media (min-width: $mobile) {
+      gap: 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: rem(14);
+    text-align: center;
+
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(3, 1fr);
+      padding-bottom: rem(22);
+      gap: 0;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:last-child) {
+      padding-bottom: rem(10);
+      border-bottom: solid 1px $color__red;
+      @media (min-width: $mobile) {
+        padding-bottom: 0;
+        border-right: solid 1px $color__red;
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__text {
+    justify-self: center;
+    max-width: rem(1000);
+    text-align: center;
+    font-family: 'Roboto';
+    color: $dark;
+    line-height: math.div(24, 17);
+    font-size: rem(17);
+    &--bold {
+      font-weight: 700;
+    }
+  }
+}
+//==========================================================================================================================================
+.access {
+  @include adaptiveValue('padding-top', 88, 24);
+  @include adaptiveValue('padding-bottom', 122, 22);
+  background-color: rgba($color: $dark__text, $alpha: 0.15);
+  &__container {
+    @media (max-width: $mobile) {
+      padding: 0 rem(10);
+    }
+    @media (max-width: $tablet) {
+      padding: 0 rem(30);
+    }
+  }
+
+  &__form {
+    display: grid;
+    justify-items: center;
+  }
+
+  &__title {
+    @include adaptiveValue('font-size', 28, 22);
+    color: $dark;
+    font-stretch: condensed;
+    margin-bottom: rem(61);
+  }
+
+  &__item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: rem(66);
+    border-bottom: solid 1px $border;
+  }
+
+  &__input {
+    font-size: rem(21);
+    background-color: transparent;
+    padding-bottom: rem(9);
+  }
+
+  &__buttons {
+    text-align: center;
+    width: 100%;
+  }
+}

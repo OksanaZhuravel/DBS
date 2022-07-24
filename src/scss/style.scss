@@ -33,6 +33,7 @@ $LightGray2: #e7e7e7;
 $Very-dark-blue: #22272a;
 $Back: #f7f7f7;
 $bag: #ffffff;
+$dark: #393939;
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
 // Минимальная ширина страницы
 $minWidth: 320;
@@ -109,6 +110,14 @@ body {
       padding: 0 rem(math.div($containerPadding, 2));
     }
   }
+  [class='access__container'] {
+    @if ($maxWidthContainerAbout>0) {
+      max-width: rem($maxWidthContainerAbout);
+    }
+    @if ($containerPaddingAbout>0) {
+      padding: 0 rem(math.div($containerPaddingAbout, 2));
+    }
+  }
   [class='about__container'] {
     @if ($maxWidthContainerAbout>0) {
       max-width: rem($maxWidthContainerAbout);
@@ -170,7 +179,11 @@ body {
 @import 'about';
 @import 'prices';
 .page {
+  &__platform {
+  }
   &-prices {
+  }
+  &__implementation {
   }
   &-solutions {
   }
@@ -187,5 +200,7 @@ body {
   &__company {
   }
   &__work {
+  }
+  &__access {
   }
 }
