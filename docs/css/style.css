@@ -3191,12 +3191,6 @@ body::after {
   }
 }
 
-@media (any-hover: hover) and (min-width: 47.99875em) {
-  .menu__link:hover::after {
-    width: 100%;
-  }
-}
-
 @media (min-width: 61.99875em) {
   .popup__content {
     padding: 4.0625rem 6rem;
@@ -3453,7 +3447,7 @@ body::after {
   }
 
   .menu__link:hover::after {
-    width: 35%;
+    width: 100%;
   }
 
   .footer__link:hover {

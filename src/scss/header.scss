@@ -102,12 +102,7 @@
     @media (any-hover: hover) {
       &:hover {
         &::after {
-          width: 35%;
-        }
-        @media (min-width: $mobile) {
-          &::after {
-            width: 100%;
-          }
+          width: 100%;
         }
       }
     }
