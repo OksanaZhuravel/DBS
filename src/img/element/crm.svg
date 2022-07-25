@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="72px" viewBox="0 0 80 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>crm__icon</title>
+    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-page" transform="translate(-1017.000000, -1668.000000)">
+            <g id="Group-13" transform="translate(133.000000, 1644.000000)">
+                <g id="Group-10" transform="translate(747.000000, 0.000000)">
+                    <g id="crm__icon" transform="translate(177.000000, 59.693163) rotate(-180.000000) translate(-177.000000, -59.693163) translate(137.000000, 24.000000)">
+                        <polyline id="Stroke-4" stroke="#434C52" points="55.7204353 57.162108 39.9989305 57.162108 39.9989305 14.2220796"></polyline>
+                        <line x1="24.2769979" y1="14.2216518" x2="55.7200075" y2="14.2216518" id="Stroke-5" stroke="#434C52"></line>
+                        <path d="M0.5,0.5 L23.7774257,0.5 L23.7774257,27.9484372 L0.5,27.9484372 L0.5,0.5 Z" id="Fill-1" stroke="#FFD109"></path>
+                        <path d="M79.5,0.5 L79.5,27.9484372 L56.2204353,27.9484372 L56.2204353,0.5 L79.5,0.5 Z" id="Fill-2" stroke="#00B948"></path>
+                        <path d="M79.5,43.4378894 L79.5,70.8863266 L56.2204353,70.8863266 L56.2204353,43.4378894 L79.5,43.4378894 Z" id="Fill-3" stroke="#D51130"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

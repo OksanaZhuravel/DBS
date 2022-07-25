@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220724203727">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220725165920">
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,7 +48,8 @@
 							оптимизации,
 							полностью переведем их&nbsp;в&nbsp;цифровую среду</div>
 						<div class="process__img process__img-ibg">
-							<img src="img/general/mosaic.svg" alt="Мозайка всех процессов">
+							<object type="image/svg+xml" data="img/general/Puzzle.svg" alt="Мозайка всех процессов" width="650" height="500"> </object>
+							<!-- <img src="img/general/mosaic.svg" alt="Мозайка всех процессов"> -->
 						</div>
 					</div>
 				</div>
@@ -68,27 +69,27 @@
 							<li class="element__item">
 								<div class="element__body">
 									<div class="element__img element__img-ibg element__img-ibg--contain">
-										<img src="img/solutions/purchasing/digital.svg" alt="картика слайда" width="67" height="56" />
+										<img src="img/element/sap.svg" alt="SAP" width="67" height="56" />
 									</div>
 									<span class="element__title">SAP</span>
-									<span class="element__text">Внутренний (для сотрудников) и&nbsp;внешний (для контрагентов)
-										кастомизируемый контур с&nbsp;настройками видимости и&nbsp;уровнями доступа</span>
+									<span class="element__text"> Оцифровка бизнес-процессов и&nbsp;алгоритмов в&nbsp;компании
+										от&nbsp;макро до&nbsp;микро уровня</span>
 								</div>
 							</li>
 							<li class=" element__item">
 								<div class="element__body">
 									<div class="element__img element__img-ibg element__img-ibg--contain">
-										<img src="img/solutions/purchasing/digital.svg" alt="картика слайда" width="67" height="56" />
+										<img src="img/element/digital.svg" alt="СЭД" width="67" height="56" />
 									</div>
 									<span class="element__title">СЭД</span>
-									<span class="element__text">Внутренний (для сотрудников) и&nbsp;внешний (для контрагентов)
-										кастомизируемый контур с&nbsp;настройками видимости и&nbsp;уровнями доступа</span>
+									<span class="element__text">Система внутреннего и&nbsp;внешнего документооборота с&nbsp;возможностью
+										синхронизации и&nbsp;взаимодействия с&nbsp;1СЭДО с&nbsp;использованием ЭЦП</span>
 								</div>
 							</li>
 							<li class="element__item">
 								<div class=" element__body">
 									<div class="element__img element__img-ibg element__img-ibg--contain">
-										<img src="img/solutions/purchasing/digital.svg" alt="картика слайда" width="67" height="56" />
+										<img src="img/element/crm.svg" alt="картика слайда" width="67" height="56" />
 									</div>
 									<span class="element__title">CRM</span>
 									<span class="element__text">Внутренний (для сотрудников) и&nbsp;внешний (для контрагентов)
@@ -103,9 +104,9 @@
 				<div class="platform__container">
 					<div class="platform__body">
 						<ul class="platform__list">
-							<li class="platform__item"><img src="img/platform/rospatent.svg" alt="Rospatent"></li>
-							<li class="platform__item"><img src="img/platform/comindware.svg" alt="Comindware"></li>
-							<li class="platform__item"><img src="img/platform/dbs.svg" alt="DBS"></li>
+							<li class="platform__item"><a href="" class="platform__link"><img src="img/platform/rospatent.svg" alt="Rospatent"></a></li>
+							<li class="platform__item"><a href="" class="platform__link"><img src="img/platform/comindware.svg" alt="Comindware"></a></li>
+							<li class="platform__item"><a href="" class="platform__link"><img src="img/platform/dbs.svg" alt="DBS"></a></li>
 						</ul>
 						<p class="platform__text">
 							Приложение <span class="platform__text platform__text--bold">DBS-Soft</span> создано на&nbsp;базе
@@ -229,38 +230,81 @@
 	<div id="feedback" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
-				<button data-close type="button" class="popup__close icon-popup"></button>
+				<button data-close type="button" class="popup__close">
+
+				</button>
 				<div class="popup__text">
-					<form data-dev class="form" id="form" data-popup-message="#form-message">
-						<h2 class="form__title">Получить тестовый доступ</h2>
-						<div class="form__item">
-							<input data-required="email" type="text" name="email" placeholder="Укажите вашу почту*" class="form__input" data-error="Укажите Вашу Почту">
-						</div>
-						<div class="checkbox form__item ">
-							<input data-required id="c_1" class="checkbox__input" type="checkbox" value="получено" checked name="agreement">
-							<label for="c_1" class="checkbox__label"><span class="checkbox__text">Даю согласие на обработку
-									персональных данных</span></label>
-						</div>
-						<div class="form__buttons">
-							<button type="submit" class="button">Отправить</button>
-						</div>
-					</form>
+					<div class="form">
+						<form data-dev class="form__boby" id="form" data-popup-message="#form-message">
+							<!-- <form data-ajax method="POST" action="sendmail.php" class="form__boby" id="form"
+            data-popup-message="#form-message"> -->
+							<h2 class="form__title">Пора действовать! </h2>
+							<p class="form__text">Оставьте заявку и наши специалисты свяжутся с Вами.</p>
+							<div class="form__item">
+								<input data-required type="text" name="name" placeholder="Как к вам обращаться?*" class="form__input" data-error="Введите Ваше Имя">
+							</div>
+							<div class="form__inner">
+								<div class="form__item">
+									<input data-required="tel" type="tel" name="phone" placeholder="Телефон*" data-error="Введите Номер Телефона" class="form__input">
+								</div>
+								<div class="form__item">
+									<input data-required="email" type="text" name="email" placeholder="E-mail*" class="form__input" data-error="Введите Вашу Почту">
+								</div>
+							</div>
+							<div class="checkbox social">
+								<p class="social__form">Пожалуйста, уточните удобный способ связи.</p>
+								<div class="checkbox">
+									<input id="c_1" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="1" name="form[]">
+									<label for="c_1" class="social__label"><span class="checkbox__text social__text">Whatsapp</span></label>
+								</div>
+								<div class="checkbox">
+									<input id="c_2" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="1" name="form[]">
+									<label for="c_2" class="social__label social__label--telegram"><span class="checkbox__text social__text">Telegram</span></label>
+								</div>
+								<div class="checkbox">
+									<input id="c_3" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="1" name="form[]">
+									<label for="c_3" class="social__label social__label--email"><span class="checkbox__text social__text">E-mail</span></label>
+								</div>
+								<div class="checkbox">
+									<input id="c_4" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="1" name="form[]">
+									<label for="c_4" class="social__label social__label--phone"><span class="checkbox__text social__text">Телефон</span></label>
+								</div>
+							</div>
+							<div class="form__item">
+								<textarea name="message" class="form__input" placeholder="Опишите сферу деятельности вашей компании  и  задачу, с которой требуется помощь
+              "></textarea>
+							</div>
+							<div class="checkbox form__item ">
+								<input data-required id="c_5" class="checkbox__input" type="checkbox" value="получено" checked name="agreement">
+								<label for="c_5" class="checkbox__label">
+									<span class="checkbox__text">Подтверждаю согласие на&nbsp;обработку своих персональных данных
+										и&nbsp;принимаю условия
+										<a href="" class="checkbox__link">Политики конфиденциальности</a> и&nbsp;<a href="" class="checkbox__link">Пользовательского соглашения</a>
+									</span></label>
+							</div>
+							<div class="form__buttons">
+								<button type="submit" class="button button--access">Отправить</button>
+							</div>
+
+
+
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-
+	</div>
 	<div id="form-message" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
-				<button data-close type="button" class="popup__close icon-popup"></button>
+				<button data-close type="button" class="popup__close"></button>
 				<div class="popup__title"> Ваша заявка отправленна.</div>
 				<div class="popup__text"> Ожидайте обратную связь от нас.</div>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220724203727"></script>
+	<script src="js/app.min.js?_v=20220725165920"></script>
 </body>
 
 </html>

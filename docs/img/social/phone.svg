@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="40px" viewBox="0 0 41 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>phone__icon</title>
+    <defs>
+        <polygon id="path-1" points="0 0 39.9995 0 39.9995 40 0 40"></polygon>
+    </defs>
+    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PopUp" transform="translate(-787.000000, -702.000000)">
+            <g id="Group-16" transform="translate(538.000000, 702.000000)">
+                <g id="phpne" transform="translate(248.500000, 0.000000)">
+                    <g id="Group-8" transform="translate(1.000000, 0.000000)">
+                        <g id="Group-24">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip-23"></g>
+                            <path d="M0,20 C0,8.954 8.954,0 20,0 C31.046,0 40,8.954 40,20 C40,31.045 31.046,40 20,40 C8.954,40 0,31.045 0,20" id="Fill-22" fill="#FFD00A" mask="url(#mask-2)"></path>
+                        </g>
+                        <path d="M15.8398,19.625 C16.8048,21.617 18.4148,23.224 20.4098,24.184 C20.7088,24.325 21.0618,24.298 21.3358,24.113 L24.2658,22.156 C24.5278,21.978 24.8648,21.947 25.1558,22.074 L30.6408,24.43 C31.0268,24.59 31.2558,24.988 31.2028,25.402 C30.8438,28.209 28.4548,30.312 25.6248,30.313 C16.8228,30.313 9.6878,23.177 9.6878,14.375 C9.6888,11.545 11.7908,9.156 14.5978,8.797 C15.0118,8.744 15.4098,8.974 15.5698,9.359 L17.9258,14.855 C18.0498,15.142 18.0238,15.471 17.8558,15.734 L15.8988,18.711 C15.7218,18.984 15.6988,19.331 15.8398,19.625 Z" id="Stroke-25" stroke="#F7F7F7" stroke-width="2.835" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <polyline id="Stroke-27" stroke="#F7F7F7" stroke-width="2.835" stroke-linecap="round" stroke-linejoin="round" points="24.6875 10.625 29.3745 10.625 29.3745 15.312"></polyline>
+                        <line x1="23.75" y1="16.25" x2="29.375" y2="10.625" id="Stroke-29" stroke="#F7F7F7" stroke-width="2.835" stroke-linecap="round" stroke-linejoin="round"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

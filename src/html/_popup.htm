@@ -1,34 +1,87 @@
 <div id="feedback" aria-hidden="true" class="popup">
   <div class="popup__wrapper">
     <div class="popup__content">
-      <button data-close type="button" class="popup__close icon-popup"></button>
+      <button data-close type="button" class="popup__close">
+
+      </button>
       <div class="popup__text">
-        <form data-dev class="form" id="form" data-popup-message="#form-message">
-          <h2 class="form__title">Получить тестовый доступ</h2>
-          <div class="form__item">
-            <input data-required="email" type="text" name="email" placeholder="Укажите вашу почту*" class="form__input"
-              data-error="Укажите Вашу Почту">
-          </div>
-          <div class="checkbox form__item ">
-            <input data-required id="c_1" class="checkbox__input" type="checkbox" value="получено" checked
-              name="agreement">
-            <label for="c_1" class="checkbox__label"><span class="checkbox__text">Даю согласие на обработку
-                персональных данных</span></label>
-          </div>
-          <div class="form__buttons">
-            <button type="submit" class="button">Отправить</button>
-          </div>
-        </form>
+        <div class="form">
+          <form data-dev class="form__boby" id="form" data-popup-message="#form-message">
+            <!-- <form data-ajax method="POST" action="sendmail.php" class="form__boby" id="form"
+            data-popup-message="#form-message"> -->
+            <h2 class="form__title">Пора действовать! </h2>
+            <p class="form__text">Оставьте заявку и наши специалисты свяжутся с Вами.</p>
+            <div class="form__item">
+              <input data-required type="text" name="name" placeholder="Как к вам обращаться?*" class="form__input"
+                data-error="Введите Ваше Имя">
+            </div>
+            <div class="form__inner">
+              <div class="form__item">
+                <input data-required="tel" type="tel" name="phone" placeholder="Телефон*"
+                  data-error="Введите Номер Телефона" class="form__input">
+              </div>
+              <div class="form__item">
+                <input data-required="email" type="text" name="email" placeholder="E-mail*" class="form__input"
+                  data-error="Введите Вашу Почту">
+              </div>
+            </div>
+            <div class="checkbox social">
+              <p class="social__form">Пожалуйста, уточните удобный способ связи.</p>
+              <div class="checkbox">
+                <input id="c_1" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="1"
+                  name="form[]">
+                <label for="c_1" class="social__label"><span class="checkbox__text social__text">Whatsapp</span></label>
+              </div>
+              <div class="checkbox">
+                <input id="c_2" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="1"
+                  name="form[]">
+                <label for="c_2" class="social__label social__label--telegram"><span
+                    class="checkbox__text social__text">Telegram</span></label>
+              </div>
+              <div class="checkbox">
+                <input id="c_3" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="1"
+                  name="form[]">
+                <label for="c_3" class="social__label social__label--email"><span
+                    class="checkbox__text social__text">E-mail</span></label>
+              </div>
+              <div class="checkbox">
+                <input id="c_4" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="1"
+                  name="form[]">
+                <label for="c_4" class="social__label social__label--phone"><span
+                    class="checkbox__text social__text">Телефон</span></label>
+              </div>
+            </div>
+            <div class="form__item">
+              <textarea name="message" class="form__input" placeholder="Опишите сферу деятельности вашей компании  и  задачу, с которой требуется помощь
+              "></textarea>
+            </div>
+            <div class="checkbox form__item ">
+              <input data-required id="c_5" class="checkbox__input" type="checkbox" value="получено" checked
+                name="agreement">
+              <label for="c_5" class="checkbox__label">
+                <span class="checkbox__text">Подтверждаю согласие на&nbsp;обработку своих персональных данных
+                  и&nbsp;принимаю условия
+                  <a href="" class="checkbox__link">Политики конфиденциальности</a> и&nbsp;<a href=""
+                    class="checkbox__link">Пользовательского соглашения</a>
+                </span></label>
+            </div>
+            <div class="form__buttons">
+              <button type="submit" class="button button--access">Отправить</button>
+            </div>
+
+
+
+          </form>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-
+</div>
 <div id="form-message" aria-hidden="true" class="popup">
   <div class="popup__wrapper">
     <div class="popup__content">
-      <button data-close type="button" class="popup__close icon-popup"></button>
+      <button data-close type="button" class="popup__close"></button>
       <div class="popup__title"> Ваша заявка отправленна.</div>
       <div class="popup__text"> Ожидайте обратную связь от нас.</div>
     </div>

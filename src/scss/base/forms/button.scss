@@ -9,7 +9,7 @@
   border: solid 1px $color__green;
   font-size: rem(14);
   letter-spacing: 0.44px;
-  transition: border 0.6s ease 0s, background-color 0.6s ease 0s;
+  transition: all 0.3s ease 0s;
   @media (any-hover: hover) {
     &:hover {
       border: solid 1px $color__yellow;
