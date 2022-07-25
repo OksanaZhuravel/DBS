@@ -4123,8 +4123,14 @@
             spaceBetween: 25,
             speed: 800,
             slidesPerView: "auto",
+            loopedSlides: 0,
             centeredSlides: true,
             watchOverflow: true,
+            loop: true,
+            autoplay: {
+                delay: 3e3,
+                disableOnInteraction: false
+            },
             keyboard: {
                 enabled: true,
                 onlyInViewport: true,

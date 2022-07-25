@@ -40,9 +40,14 @@ function initSliders() {
       spaceBetween: 25,
       speed: 800,
       slidesPerView: 'auto',
+      loopedSlides: 0,
       centeredSlides: true,
       watchOverflow: true,
-
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       keyboard: {
         enabled: true,
         onlyInViewport: true,

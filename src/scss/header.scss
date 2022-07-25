@@ -67,8 +67,9 @@
       &::before {
         // right: 0;
       }
-      .menu__link {
-        color: $dark__text;
+
+      &.menu__link._active {
+        color: $bag;
       }
     }
   }
@@ -88,13 +89,13 @@
 
   &__link {
     padding: 0 0 rem(5) 0;
-
+    color: rgba($color: $bag, $alpha: 0.5);
     &::after {
       content: '';
       display: block;
       width: rem(0);
       height: rem(4);
-      margin: rem(10) 0 0 0;
+      // margin: rem(5) 0 0 0;
       background-color: $color__yellow;
       transition: width 0.6s ease 0s;
     }
@@ -102,21 +103,16 @@
       &:hover {
         &::after {
           width: 35%;
-          @media (min-width: $mobile) {
+        }
+        @media (min-width: $mobile) {
+          &::after {
             width: 100%;
           }
         }
       }
     }
     &._active {
-      &::after {
-        width: 35%;
-        background-color: $color__red;
-        @media (min-width: $mobile) {
-          width: 100%;
-          background-color: $color__red;
-        }
-      }
+      color: $bag;
     }
   }
 }

@@ -376,23 +376,28 @@
   &__wrapper {
     padding-bottom: rem(70);
     @include adaptiveValue('padding-top', 90, 48);
-    counter-reset: myCounter;
   }
-
+  &__span {
+    position: absolute;
+    top: rem(130);
+    left: rem(22);
+    font-family: 'Roboto';
+    color: $dark__text;
+    padding: rem(4);
+    font-size: rem(18);
+  }
   &__slide {
     width: auto;
     font-family: 'Roboto';
     color: $dark__text;
-    counter-increment: myCounter;
     list-style-type: none;
     position: relative;
     &:before {
-      content: '0' counter(myCounter);
+      content: '';
       position: absolute;
       top: rem(130);
       left: rem(22);
       border: solid 1px $color__green;
-
       padding: rem(4);
       width: rem(26);
       height: rem(26);
