@@ -719,13 +719,27 @@ body::after {
 }
 
 .header {
-  background-color: #434c52;
   max-height: 5.625rem;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
   z-index: 10;
 }
 
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #434c52;
+  left: 0;
+}
+
 .header__container {
+  position: relative;
+  z-index: 2;
   padding: 0 0.625rem;
   background-color: #434c52;
   text-transform: uppercase;
@@ -798,6 +812,7 @@ body::after {
   display: block;
   width: 0rem;
   height: 0.25rem;
+  margin: 0.3125rem 0 0 0;
   background-color: #ffd109;
   -webkit-transition: width 0.6s ease 0s;
   -o-transition: width 0.6s ease 0s;
@@ -923,15 +938,15 @@ body::after {
   position: relative;
 }
 
-@supports (padding-top: clamp( 2.5rem , -0.8874709977rem  +  16.9373549884vw , 11.625rem )) {
+@supports (padding-top: clamp( 8.75rem , 7.6827146172rem  +  5.3364269142vw , 11.625rem )) {
   .main {
-    padding-top: clamp( 2.5rem , -0.8874709977rem  +  16.9373549884vw , 11.625rem );
+    padding-top: clamp( 8.75rem , 7.6827146172rem  +  5.3364269142vw , 11.625rem );
   }
 }
 
-@supports not (padding-top: clamp( 2.5rem , -0.8874709977rem  +  16.9373549884vw , 11.625rem )) {
+@supports not (padding-top: clamp( 8.75rem , 7.6827146172rem  +  5.3364269142vw , 11.625rem )) {
   .main {
-    padding-top: calc(2.5rem + 9.125 * (100vw - 20rem) / 53.875);
+    padding-top: calc(8.75rem + 2.875 * (100vw - 20rem) / 53.875);
   }
 }
 
@@ -1362,15 +1377,15 @@ body::after {
   color: #22272a;
 }
 
-@supports (padding-top: clamp( 2.3125rem , -1.0749709977rem  +  16.9373549884vw , 11.4375rem )) {
+@supports (padding-top: clamp( 8.75rem , 7.7523201856rem  +  4.9883990719vw , 11.4375rem )) {
   .application {
-    padding-top: clamp( 2.3125rem , -1.0749709977rem  +  16.9373549884vw , 11.4375rem );
+    padding-top: clamp( 8.75rem , 7.7523201856rem  +  4.9883990719vw , 11.4375rem );
   }
 }
 
-@supports not (padding-top: clamp( 2.3125rem , -1.0749709977rem  +  16.9373549884vw , 11.4375rem )) {
+@supports not (padding-top: clamp( 8.75rem , 7.7523201856rem  +  4.9883990719vw , 11.4375rem )) {
   .application {
-    padding-top: calc(2.3125rem + 9.125 * (100vw - 20rem) / 53.875);
+    padding-top: calc(8.75rem + 2.6875 * (100vw - 20rem) / 53.875);
   }
 }
 
@@ -2453,15 +2468,15 @@ body::after {
   justify-items: center;
 }
 
-@supports (padding-top: clamp( 2.3125rem , -1.2373839907rem  +  17.7494199536vw , 11.875rem )) {
+@supports (padding-top: clamp( 8.75rem , 7.5899071926rem  +  5.8004640371vw , 11.875rem )) {
   .about {
-    padding-top: clamp( 2.3125rem , -1.2373839907rem  +  17.7494199536vw , 11.875rem );
+    padding-top: clamp( 8.75rem , 7.5899071926rem  +  5.8004640371vw , 11.875rem );
   }
 }
 
-@supports not (padding-top: clamp( 2.3125rem , -1.2373839907rem  +  17.7494199536vw , 11.875rem )) {
+@supports not (padding-top: clamp( 8.75rem , 7.5899071926rem  +  5.8004640371vw , 11.875rem )) {
   .about {
-    padding-top: calc(2.3125rem + 9.5625 * (100vw - 20rem) / 53.875);
+    padding-top: calc(8.75rem + 3.125 * (100vw - 20rem) / 53.875);
   }
 }
 
@@ -2603,15 +2618,15 @@ body::after {
   justify-items: center;
 }
 
-@supports (padding-top: clamp( 2.3125rem , -1.2373839907rem  +  17.7494199536vw , 11.875rem )) {
+@supports (padding-top: clamp( 8.75rem , 7.5899071926rem  +  5.8004640371vw , 11.875rem )) {
   .prices {
-    padding-top: clamp( 2.3125rem , -1.2373839907rem  +  17.7494199536vw , 11.875rem );
+    padding-top: clamp( 8.75rem , 7.5899071926rem  +  5.8004640371vw , 11.875rem );
   }
 }
 
-@supports not (padding-top: clamp( 2.3125rem , -1.2373839907rem  +  17.7494199536vw , 11.875rem )) {
+@supports not (padding-top: clamp( 8.75rem , 7.5899071926rem  +  5.8004640371vw , 11.875rem )) {
   .prices {
-    padding-top: calc(2.3125rem + 9.5625 * (100vw - 20rem) / 53.875);
+    padding-top: calc(8.75rem + 3.125 * (100vw - 20rem) / 53.875);
   }
 }
 
@@ -2906,6 +2921,16 @@ body::after {
 
   .header__button {
     margin-top: 0;
+  }
+
+  .menu {
+    min-height: 5.625rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .menu__list {
@@ -3318,11 +3343,11 @@ body::after {
     position: fixed;
     width: 100%;
     height: 100%;
-    top: 4.375rem;
+    top: 5.625rem;
     right: -100%;
     overflow: auto;
     background-color: #434c52;
-    padding: 0.9375rem 0.9375rem;
+    padding: 1.5rem 1.5rem;
     -webkit-transition: right 0.3s ease 0s;
     -o-transition: right 0.3s ease 0s;
     transition: right 0.3s ease 0s;
@@ -3448,6 +3473,10 @@ body::after {
 
   .menu__link:hover::after {
     width: 100%;
+  }
+
+  .menu-open .menu__link:hover::after {
+    width: 35%;
   }
 
   .footer__link:hover {

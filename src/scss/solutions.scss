@@ -3,7 +3,7 @@
 .application {
   background-color: $Back;
   color: $Very-dark-blue;
-  @include adaptiveValue('padding-top', 183, 37);
+  @include adaptiveValue('padding-top', 183, 140);
   @include adaptiveValue('padding-bottom', 147, 48);
   &__container {
     @media (min-width: $mobile) {

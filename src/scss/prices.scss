@@ -2,7 +2,7 @@
 
 .prices {
   background-color: $Back;
-  @include adaptiveValue('padding-top', 190, 37);
+  @include adaptiveValue('padding-top', 190, 140);
   @include adaptiveValue('padding-bottom', 113, 48);
   position: relative;
   display: grid;

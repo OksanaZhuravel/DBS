@@ -1,6 +1,6 @@
 //====================================================================================================
 .main {
-  @include adaptiveValue('padding-top', 186, 40);
+  @include adaptiveValue('padding-top', 186, 140);
   // @include adaptiveValue('padding-bottom', 180, 40);
   background-color: $Back;
   position: relative;
