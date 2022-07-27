@@ -485,12 +485,7 @@ body::after {
   display: block;
   width: 1.25rem;
   height: 1.25rem;
-  background: url("../img/general/close__btn.svg") center/cover no-repeat;
-  background-size: contain;
-}
-
-.popup__text {
-  color: #00b948;
+  background: url("../img/general/close__btn.svg") center/contain no-repeat;
 }
 
 .popup__title {
@@ -892,6 +887,9 @@ body::after {
 
 .footer__link {
   color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.6s ease 0s;
+  -o-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
 }
 
 .footer__logo {
@@ -931,11 +929,13 @@ body::after {
 .sales__item a {
   text-decoration: underline;
   color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: color 0.6s ease 0s;
+  -o-transition: color 0.6s ease 0s;
+  transition: color 0.6s ease 0s;
 }
 
 .main {
   background-color: #f7f7f7;
-  position: relative;
 }
 
 @supports (padding-top: clamp( 8.75rem , 7.6827146172rem  +  5.3364269142vw , 11.625rem )) {
@@ -950,19 +950,17 @@ body::after {
   }
 }
 
-.main::after {
-  content: "";
-  display: block;
-  width: 6.25rem;
-  height: 6.25rem;
-  border-radius: 0.625rem;
-  background-color: #00b948;
+.main__decor {
   position: absolute;
-  top: -7%;
-  right: -7%;
+  background-color: #00b948;
+  border: solid 1px #00b948;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+  top: -7.8125rem;
+  right: -3.125rem;
+  width: 7.875rem;
+  height: 7.875rem;
   z-index: 1;
 }
 
@@ -1219,7 +1217,7 @@ body::after {
 }
 
 .element__text {
-  min-height: 7.5rem;
+  min-height: 10.625rem;
   line-height: 1.4117647059;
 }
 
@@ -1297,6 +1295,7 @@ body::after {
 }
 
 .platform__text--bold {
+  white-space: nowrap;
   font-weight: 700;
 }
 
@@ -1494,6 +1493,7 @@ body::after {
   border-color: #979797;
   border-left: 1px;
   border-right: 1px;
+  z-index: 5;
 }
 
 .application__line {
@@ -1719,7 +1719,6 @@ body::after {
 }
 
 .cause__img img {
-  height: 20.25rem;
   z-index: 1;
 }
 
@@ -1734,8 +1733,8 @@ body::after {
       align-content: center;
   text-align: center;
   justify-items: center;
-  position: absolute;
   background-color: #ffffff;
+  padding-top: 0.75rem;
 }
 
 .cause__title {
@@ -2035,20 +2034,8 @@ body::after {
 }
 
 .company {
+  padding-top: 6.875rem;
   background-color: #ffffff;
-  position: relative;
-}
-
-@supports (padding-top: clamp( 3.125rem , 1.7328886311rem  +  6.9605568445vw , 6.875rem )) {
-  .company {
-    padding-top: clamp( 3.125rem , 1.7328886311rem  +  6.9605568445vw , 6.875rem );
-  }
-}
-
-@supports not (padding-top: clamp( 3.125rem , 1.7328886311rem  +  6.9605568445vw , 6.875rem )) {
-  .company {
-    padding-top: calc(3.125rem + 3.75 * (100vw - 20rem) / 53.875);
-  }
 }
 
 @supports (padding-bottom: clamp( 6.875rem , 6.1789443155rem  +  3.4802784223vw , 8.75rem )) {
@@ -2063,19 +2050,17 @@ body::after {
   }
 }
 
-.company::after {
-  content: "";
-  display: block;
-  width: 7.875rem;
-  height: 7.875rem;
-  border-radius: 0.625rem;
-  background-color: #00b948;
+.company__decor {
   position: absolute;
-  top: -7%;
-  right: -7%;
+  background-color: #00b948;
+  border: solid 1px #00b948;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
+  top: -7.8125rem;
+  right: -3.125rem;
+  width: 7.875rem;
+  height: 7.875rem;
   z-index: 1;
 }
 
@@ -2841,7 +2826,11 @@ body::after {
 
 .page__purchasing {
   position: relative;
-  z-index: 2;
+  z-index: 3;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .swiper {
@@ -2954,9 +2943,11 @@ body::after {
     visibility: hidden;
   }
 
-  .main::after {
+  .main__decor {
     width: 14.5625rem;
     height: 14.5625rem;
+    top: -9.6875rem;
+    right: -9.6875rem;
   }
 
   .process__container {
@@ -3056,6 +3047,7 @@ body::after {
     max-width: none;
     text-align: left;
     justify-items: left;
+    padding-top: 0;
   }
 
   .cause__title {
@@ -3081,6 +3073,13 @@ body::after {
   .purchasing__text {
     border-left: solid 1px #00b948;
     padding-left: 1.25rem;
+  }
+
+  .company__decor {
+    width: 14.5625rem;
+    height: 14.5625rem;
+    top: -9.6875rem;
+    right: -9.6875rem;
   }
 
   .work__title {
@@ -3236,11 +3235,6 @@ body::after {
     margin: -6.25rem 0 2.8125rem 0;
   }
 
-  .main::after {
-    top: -5%;
-    right: 0;
-  }
-
   .implementation__decor img {
     display: block;
   }
@@ -3274,11 +3268,6 @@ body::after {
 
   .cause__container {
     max-width: none;
-  }
-
-  .company::after {
-    width: 14.5625rem;
-    height: 14.5625rem;
   }
 
   .about::before {

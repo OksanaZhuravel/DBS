@@ -54,8 +54,7 @@
       display: block;
       width: rem(20);
       height: rem(20);
-      background: url('@img/general/close__btn.svg') center / cover no-repeat;
-      background-size: contain;
+      background: url('@img/general/close__btn.svg') center / contain no-repeat;
     }
     @media (any-hover: hover) {
       &:hover {
@@ -65,7 +64,7 @@
   }
 
   &__text {
-    color: $color__green;
+    // color: $color__green;
   }
 
   &__title {

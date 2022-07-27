@@ -2,20 +2,15 @@
 .footer {
   @include adaptiveValue('padding-top', 32, 46);
   @include adaptiveValue('padding-bottom', 55, 48);
-
   background-color: $dark__grey__blue;
   color: $bag;
   @include adaptiveValue('font-size', 18, 16);
-  // font-size: rem(18);
   line-height: 1.67;
   &__container {
     padding: 0 rem(44);
     @media (min-width: $mobile) {
       padding: 0 rem(20);
     }
-    // @media (min-width: $tablet) {
-    //   padding: 0 rem(10);
-    // }
   }
 
   &__body {
@@ -26,8 +21,6 @@
     }
     @media (min-width: $tablet) {
       grid-template-columns: rem(500) repeat(2, minmax(rem(200), max-content));
-
-      // grid-template-columns: rem(500) repeat(2, 1fr);
     }
   }
 
@@ -48,6 +41,7 @@
 
   &__link {
     color: rgba($color: $bag, $alpha: 0.5);
+    transition: all 0.6s ease 0s;
     @media (any-hover: hover) {
       &:hover {
         text-decoration: underline;
@@ -100,6 +94,7 @@
     a {
       text-decoration: underline;
       color: rgba($color: $bag, $alpha: 0.5);
+      transition: color 0.6s ease 0s;
       @media (any-hover: hover) {
         &:hover {
           color: rgba($color: $color__green, $alpha: 0.5);
@@ -115,5 +110,3 @@
   }
 }
 //==========================================================================================================================================
-
-//====================================================================================================

@@ -82,6 +82,7 @@
     border-color: $border;
     border-left: 1px;
     border-right: 1px;
+    z-index: 5;
   }
 
   &__line {
@@ -262,7 +263,7 @@
       padding-bottom: percent(559, 733);
     }
     img {
-      height: rem(324);
+      // height: rem(324);
       z-index: 1;
       @media (min-width: $mobile) {
         left: -95%;
@@ -280,14 +281,15 @@
     align-content: center;
     text-align: center;
     justify-items: center;
-    position: absolute;
     background-color: $bag;
+    padding-top: rem(12);
     @media (min-width: $mobile) {
       position: static;
       z-index: 0;
       max-width: none;
       text-align: left;
       justify-items: left;
+      padding-top: 0;
     }
   }
 
@@ -524,25 +526,25 @@
 //==========================================================================================================================================
 
 .company {
-  @include adaptiveValue('padding-top', 110, 50);
+  padding-top: rem(110);
   @include adaptiveValue('padding-bottom', 140, 110);
   background-color: $bag;
-  position: relative;
-  &::after {
-    content: '';
-    display: block;
+
+  &__decor {
+    position: absolute;
+    background-color: $color__green;
+    border: solid 1px $color__green;
+    transform: rotate(45deg);
+    top: rem(-125);
+    right: rem(-50);
     width: rem(126);
     height: rem(126);
-    border-radius: rem(10);
-    background-color: $color__green;
-    position: absolute;
-    top: -7%;
-    right: -7%;
-    transform: rotate(45deg);
     z-index: 1;
-    @media (min-width: $tablet) {
+    @media (min-width: $mobile) {
       width: rem(233);
       height: rem(233);
+      top: rem(-155);
+      right: rem(-155);
     }
   }
   &__container {

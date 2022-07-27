@@ -195,7 +195,7 @@ body {
   }
   &__purchasing {
     position: relative;
-    z-index: 2;
+    z-index: 3;
   }
   &__company {
   }
@@ -203,4 +203,7 @@ body {
   }
   &__access {
   }
+}
+.nowrap {
+  white-space: nowrap;
 }
