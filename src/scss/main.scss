@@ -2,7 +2,7 @@
 .main {
   @include adaptiveValue('padding-top', 186, 140);
   background-color: $Back;
-
+  position: relative;
   &__decor {
     position: absolute;
     background-color: $color__green;

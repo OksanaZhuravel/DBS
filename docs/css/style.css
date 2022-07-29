@@ -748,6 +748,10 @@ body::after {
   padding: 0 0.625rem;
 }
 
+.header__menu {
+  padding-top: 0.625rem;
+}
+
 .header__button {
   margin-top: 2.8125rem;
 }
@@ -930,6 +934,7 @@ body::after {
 
 .main {
   background-color: #f7f7f7;
+  position: relative;
 }
 
 @supports (padding-top: clamp( 8.75rem , 7.6827146172rem  +  5.3364269142vw , 11.625rem )) {
@@ -2515,6 +2520,9 @@ body::after {
   font-family: "Roboto";
   line-height: 1.4117647059;
   font-size: 1.0625rem;
+}
+
+.about__text:not(:last-child) {
   margin-bottom: 0.875rem;
 }
 
@@ -2524,20 +2532,9 @@ body::after {
 }
 
 .about__body {
+  padding-top: 2.5rem;
   -ms-grid-column-align: end;
       justify-self: end;
-}
-
-@supports (padding-top: clamp( 2.5rem , 2.5rem  +  0vw , 2.5rem )) {
-  .about__body {
-    padding-top: clamp( 2.5rem , 2.5rem  +  0vw , 2.5rem );
-  }
-}
-
-@supports not (padding-top: clamp( 2.5rem , 2.5rem  +  0vw , 2.5rem )) {
-  .about__body {
-    padding-top: calc(2.5rem + 0 * (100vw - 20rem) / 53.875);
-  }
 }
 
 @supports (padding-bottom: clamp( 2.625rem , 1.372099768rem  +  6.2645011601vw , 6rem )) {
@@ -2706,10 +2703,6 @@ body::after {
   font-family: "Roboto";
   line-height: 1.4117647059;
   font-size: 1.0625rem;
-}
-
-.prices__excerpt:not(:last-child) {
-  margin-bottom: 1.25rem;
 }
 
 .prices__excerpt--bottom {

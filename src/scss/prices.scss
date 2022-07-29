@@ -84,9 +84,9 @@
     font-family: 'Roboto';
     line-height: math.div(24, 17);
     font-size: rem(17);
-    &:not(:last-child) {
-      margin-bottom: rem(20);
-    }
+    // &:not(:last-child) {
+    //   margin-bottom: rem(20);
+    // }
     &--bottom {
       margin-top: rem(40);
     }

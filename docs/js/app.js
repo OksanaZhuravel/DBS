@@ -692,7 +692,13 @@
                     this.addError(formRequiredItem);
                     error++;
                 } else this.removeError(formRequiredItem);
-            } else if ("checkbox" === formRequiredItem.type && !formRequiredItem.checked) {
+            } else if ("tel" === formRequiredItem.dataset.required) {
+                formRequiredItem.value = formRequiredItem.value.replace(" ", "");
+                if (this.telTest(formRequiredItem)) {
+                    this.addError(formRequiredItem);
+                    error++;
+                } else this.removeError(formRequiredItem);
+            } else if ("checkbox" === formRequiredItem.type && false === formRequiredItem.checked) {
                 this.addError(formRequiredItem);
                 error++;
             } else if (!formRequiredItem.value.trim()) {
@@ -739,6 +745,9 @@
         },
         emailTest(formRequiredItem) {
             return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(formRequiredItem.value);
+        },
+        telTest(formRequiredItem) {
+            return !/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/.test(formRequiredItem.value);
         }
     };
     function formSubmit(options = {
@@ -765,14 +774,14 @@
                     const formMethod = form.getAttribute("method") ? form.getAttribute("method").trim() : "GET";
                     const formData = new FormData(form);
                     form.classList.add("_sending");
-                    const response = await fetch(formAction, {
+                    const result = await fetch(formAction, {
                         method: formMethod,
                         body: formData
                     });
-                    if (response.ok) {
-                        let responseResult = await response.json();
+                    if (result.ok) {
+                        let resultResult = await result.json();
                         form.classList.remove("_sending");
-                        formSent(form, responseResult);
+                        formSent(form, resultResult);
                     } else {
                         alert("Ошибка");
                         form.classList.remove("_sending");
@@ -787,7 +796,7 @@
                 if (formError && form.hasAttribute("data-goto-error")) gotoBlock(formError, true, 1e3);
             }
         }
-        function formSent(form, responseResult = ``) {
+        function formSent(form, resultResult = ``) {
             document.dispatchEvent(new CustomEvent("formSent", {
                 detail: {
                     form

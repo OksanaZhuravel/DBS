@@ -100,13 +100,14 @@
         </section>
         <section class="access page__access">
           <div class="access__container">
-            <form data-dev class="access__form" id="access">
+            <form data-ajax method="POST" action="sendmail.php" class="access__form" id="access"
+              data-popup-message="#form-message">
+              <!-- <form data-dev class="access__form" id="access"> -->
               <h2 class="access__title">Получить тестовый доступ</h2>
               <div class="access__item">
                 <input data-required="email" type="text" name="email" placeholder="Укажите вашу почту"
                   class="access__input" data-error="Укажите Вашу Почту">
               </div>
-
               <div class="access__buttons">
                 <button type="submit" class="button button--access">Отправить</button>
               </div>

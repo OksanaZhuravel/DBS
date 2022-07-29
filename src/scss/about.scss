@@ -55,7 +55,9 @@
     font-family: 'Roboto';
     line-height: math.div(24, 17);
     font-size: rem(17);
-    margin-bottom: rem(14);
+    &:not(:last-child) {
+      margin-bottom: rem(14);
+    }
     &--bold {
       font-weight: 700;
       color: $dark__grey__blue;
@@ -63,7 +65,7 @@
   }
 
   &__body {
-    @include adaptiveValue('padding-top', 40, 40);
+    padding-top: rem(40);
     @include adaptiveValue('padding-bottom', 96, 42);
     justify-self: end;
   }
