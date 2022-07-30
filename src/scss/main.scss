@@ -154,7 +154,7 @@
     gap: rem(21);
     counter-reset: myCount;
     @media (min-width: $mobile) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
@@ -276,7 +276,7 @@
     padding-bottom: rem(24);
 
     @media (min-width: $mobile) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr 1fr;
       padding-bottom: rem(22);
       gap: 0;
     }
@@ -425,15 +425,18 @@
   }
 
   &__body {
-    justify-items: center;
     padding-top: rem(18);
     display: grid;
     @media (min-width: $mobile) {
-      justify-items: left;
-      grid-template-columns: repeat(2, minmax(rem(330), 1fr));
+      grid-template-columns:
+        minmax(rem(330), 1fr)
+        minmax(rem(330), 1fr);
     }
     @media (min-width: $tablet) {
-      grid-template-columns: repeat(3, minmax(rem(330), 1fr));
+      grid-template-columns:
+        minmax(rem(330), 1fr)
+        minmax(rem(330), 1fr)
+        minmax(rem(330), 1fr);
     }
   }
 

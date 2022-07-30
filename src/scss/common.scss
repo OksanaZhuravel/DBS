@@ -48,7 +48,7 @@
     z-index: 5;
     background-color: $LightGray2;
     border-radius: 50%;
-    // outline: $color__yellow;
+
     &::after {
       content: '';
       display: block;
@@ -64,14 +64,12 @@
   }
 
   &__text {
-    // color: $color__green;
   }
 
   &__title {
     text-transform: uppercase;
     font-weight: 700;
     @include adaptiveValue('font-size', 26, 18);
-    // font-size: rem(26);
     color: $Very-dark-blue;
     &:not(:last-child) {
       @include adaptiveValue(' margin-bottom', 35, 12);
@@ -119,7 +117,7 @@
   &__inner {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: rem(20);
   }
   &__item {
@@ -160,7 +158,7 @@
 .social {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: rem(23);
   padding-bottom: rem(32);
   &__form {

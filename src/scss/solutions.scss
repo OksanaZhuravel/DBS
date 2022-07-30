@@ -730,18 +730,18 @@
     gap: rem(24);
     @media (min-width: $mobile) {
       &--possession {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         column-gap: 0;
       }
     }
   }
   &__inner {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     @include adaptiveValue('gap', 20, 10);
     @media (min-width: $mobile) {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
       align-self: flex-start;
     }
   }

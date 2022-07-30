@@ -17,10 +17,15 @@
     display: grid;
     @include adaptiveValue('gap', 40, 20);
     @media (min-width: $mobile) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr 1fr;
     }
     @media (min-width: $tablet) {
-      grid-template-columns: rem(500) repeat(2, minmax(rem(200), max-content));
+      grid-template-columns:
+        rem(500)
+        minmax(rem(200), max-content)
+        minmax(rem(200), max-content);
+
+      // grid-template-columns: rem(500) repeat(2, minmax(rem(200), max-content));
     }
   }
 
