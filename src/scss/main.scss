@@ -364,3 +364,170 @@
     width: 100%;
   }
 }
+
+//==========================================================================================================================================
+
+.capabilities {
+  background-color: $LightGray;
+  @include adaptiveValue('padding-top', 154, 24);
+  @include adaptiveValue('padding-bottom', 171, 24);
+
+  &__container {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 80%;
+      bottom: 0;
+      right: 0;
+      opacity: 0.1;
+      @media (min-width: $mobile) {
+        background: url('@img/general/tech.svg') bottom / contain no-repeat;
+      }
+      @media (min-width: $tablet) {
+        bottom: rem(-122);
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    color: $Very-dark-blue;
+    font-weight: 300;
+    font-stretch: condensed;
+    @include adaptiveValue('font-size', 72, 40);
+    &--bold {
+      font-weight: 700;
+    }
+    &--color {
+      color: $color__green;
+      font-weight: 700;
+    }
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 48, 24);
+    }
+    @media (min-width: $mobile) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    color: $dark__grey__blue;
+    @include adaptiveValue('font-size', 26, 18);
+    line-height: math.div(35, 26);
+    font-weight: 300;
+    font-stretch: condensed;
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &__body {
+    justify-items: center;
+    padding-top: rem(18);
+    display: grid;
+    @media (min-width: $mobile) {
+      justify-items: left;
+      grid-template-columns: repeat(2, minmax(rem(330), 1fr));
+    }
+    @media (min-width: $tablet) {
+      grid-template-columns: repeat(3, minmax(rem(330), 1fr));
+    }
+  }
+
+  &__answer {
+  }
+}
+
+.answer {
+  padding: rem(20) 0;
+  position: relative;
+  &::before,
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  &::after {
+    border-top: 1px solid $mainColor;
+  }
+  @media (min-width: $mobile) {
+    padding: rem(68) rem(25) rem(54) rem(25);
+    &::before {
+      border-right: 1px solid $mainColor;
+    }
+    &--top {
+      &::after {
+        border-top: none;
+      }
+    }
+    &:nth-of-type(2n) {
+      &::before {
+        border: none;
+      }
+    }
+  }
+  @media (min-width: $tablet) {
+    min-height: rem(317);
+    padding: rem(68) rem(25) rem(54) rem(25);
+    &::before {
+      height: rem(250);
+      border-right: 1px solid $mainColor;
+    }
+    &::after {
+      border-top: 1px solid $mainColor;
+    }
+    &--top,
+    &--center {
+      &::after {
+        border-top: none;
+      }
+    }
+    &--bottom {
+      &::before {
+        top: 0;
+      }
+    }
+    &:nth-of-type(2n) {
+      &::before {
+        border-right: 1px solid $mainColor;
+      }
+    }
+    &:nth-of-type(3n) {
+      &::before {
+        border: none;
+      }
+    }
+  }
+
+  &__title {
+    display: grid;
+    font-stretch: condensed;
+    font-size: rem(18);
+    line-height: math.div(24, 18);
+    color: $Very-dark-blue;
+    text-transform: uppercase;
+    padding-bottom: rem(18);
+    font-weight: 700;
+  }
+  &__subtitle {
+  }
+  &__list {
+  }
+
+  &__item {
+    max-width: rem(300);
+    font-family: 'Roboto';
+    line-height: math.div(22, 17);
+    font-size: rem(17);
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+}

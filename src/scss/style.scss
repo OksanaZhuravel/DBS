@@ -179,6 +179,8 @@ body {
 @import 'about';
 @import 'prices';
 .page {
+  &__capabilities {
+  }
   &__platform {
   }
   &-prices {

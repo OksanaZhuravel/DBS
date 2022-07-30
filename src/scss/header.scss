@@ -29,7 +29,7 @@
     grid-template-columns: 1fr rem(50);
     @media (min-width: $mobile) {
       padding: 0 rem(5);
-      grid-template-columns: rem(150) minmax(min-content, 1fr) rem(155);
+      grid-template-columns: rem(150) minmax(min-content, 1fr) rem(150);
       justify-items: center;
     }
   }
@@ -96,10 +96,13 @@
     display: flex;
     flex-flow: column wrap;
     row-gap: rem(25);
-    @include adaptiveValue('column-gap', 45, 20);
     @media (min-width: $mobile) {
       flex-flow: row wrap;
       row-gap: rem(5);
+      column-gap: rem(16);
+    }
+    @media (min-width: $tablet) {
+      column-gap: rem(45);
     }
   }
 
