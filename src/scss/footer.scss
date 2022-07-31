@@ -15,17 +15,22 @@
 
   &__body {
     display: grid;
-    @include adaptiveValue('gap', 40, 20);
+    gap: 70px;
+    // @include adaptiveValue('gap', 40, 20);
     @media (min-width: $mobile) {
       grid-template-columns: 1fr 1fr 1fr;
     }
     @media (min-width: $tablet) {
-      grid-template-columns:
-        rem(500)
-        minmax(rem(200), max-content)
-        minmax(rem(200), max-content);
+      grid-template-columns: minmax(512px, 1fr) minmax(200px, 1fr) minmax(
+          200px,
+          1fr
+        );
+      // grid-template-columns:
+      //   rem(500)
+      //   minmax(rem(200), max-content)
+      //   minmax(rem(200), max-content);
 
-      // grid-template-columns: rem(500) repeat(2, minmax(rem(200), max-content));
+      // // grid-template-columns: rem(500) repeat(2, minmax(rem(200), max-content));
     }
   }
 
@@ -33,6 +38,9 @@
   }
 
   &__text {
+    & a[href='mailto::info@dbs-soft.ru'] {
+      text-decoration: underline;
+    }
   }
 
   &__menu {
@@ -42,15 +50,19 @@
   }
 
   &__item {
+    & a {
+      text-decoration: underline;
+    }
   }
 
   &__link {
     color: rgba($color: $bag, $alpha: 0.5);
     transition: all 0.6s ease 0s;
+
     @media (any-hover: hover) {
       &:hover {
         text-decoration: underline;
-        color: rgba($color: $color__green, $alpha: 0.5);
+        color: $color__green;
       }
     }
   }
@@ -58,7 +70,7 @@
   &__logo {
     margin: rem(40) 0 rem(45) 0;
     @media (min-width: $tablet) {
-      margin: rem(-100) 0 rem(45) 0;
+      margin: rem(-100) 0 rem(38) 0;
     }
   }
 
@@ -75,7 +87,6 @@
   &__title {
     @include adaptiveValue('font-size', 18, 24);
     text-transform: uppercase;
-
     font-weight: 700;
     &--visibility {
       visibility: visible;
@@ -102,7 +113,7 @@
       transition: color 0.6s ease 0s;
       @media (any-hover: hover) {
         &:hover {
-          color: rgba($color: $color__green, $alpha: 0.5);
+          color: $color__green;
         }
       }
     }

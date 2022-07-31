@@ -1,12 +1,12 @@
 //==========================================================================================================================================
 .about {
   background-color: $Back;
-  @include adaptiveValue('padding-top', 190, 140);
+  @include adaptiveValue('padding-top', 278, 140);
   @include adaptiveValue('padding-bottom', 147, 48);
   position: relative;
   display: grid;
   justify-items: center;
-
+  position: relative;
   @media (min-width: $mobile) {
     &::before {
       content: '';
@@ -18,12 +18,13 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center bottom;
+      left: rem(266);
     }
   }
   @media (min-width: $tablet) {
     &::before {
-      max-height: rem(190);
-      max-width: rem(752);
+      max-height: rem(278);
+      max-width: 60%;
     }
   }
   &__container {
@@ -40,10 +41,11 @@
   }
 
   &__title {
+    text-align: center;
     @include adaptiveValue('font-size', 72, 38);
     white-space: nowrap;
-    line-height: math.div(52, 48);
-    font-weight: 300;
+    line-height: normal;
+    letter-spacing: normal;
     color: $Very-dark-blue;
     font-stretch: condensed;
     &:not(:last-child) {
@@ -56,7 +58,7 @@
     line-height: math.div(24, 17);
     font-size: rem(17);
     &:not(:last-child) {
-      margin-bottom: rem(14);
+      margin-bottom: rem(24);
     }
     &--bold {
       font-weight: 700;
@@ -65,19 +67,18 @@
   }
 
   &__body {
-    padding-top: rem(40);
-    @include adaptiveValue('padding-bottom', 96, 42);
+    padding-top: rem(32);
+    @include adaptiveValue('padding-bottom', 60, 42);
     justify-self: end;
   }
 
   &__content {
-    @include adaptiveValue('padding-left', 20, 5);
+    @include adaptiveValue('padding-left', 19, 5);
     border-left: solid 1px $color__green;
-    max-width: rem(560);
+    max-width: rem(571);
     @include adaptiveValue('font-size', 26, 22);
     line-height: math.div(35, 26);
     font-stretch: condensed;
-    font-weight: 300;
     color: $Very-dark-blue;
   }
 

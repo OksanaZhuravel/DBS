@@ -1,16 +1,22 @@
 * {
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
-:focus,
-:active {
-  // outline: none;
+// :focus,
+// :active {
+//   outline: none;
+// }
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+  outline: none;
 }
 a:focus,
 a:active {
@@ -71,4 +77,20 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
+}
+h1 {
+  font-weight: 300;
+  font-size: rem(72);
+}
+h2 {
+  font-weight: 700;
+  font-size: rem(38);
+}
+h3 {
+  font-weight: 300;
+  font-size: rem(26);
+}
+h4 {
+  font-weight: 700;
+  font-size: rem(18);
 }

@@ -4,16 +4,19 @@
 .button {
   display: inline-flex;
   background-color: transparent;
-  padding: rem(12) rem(16);
+  padding: rem(12) rem(15);
   border-radius: 3px;
   border: solid 1px $color__green;
   font-size: rem(14);
   letter-spacing: 0.44px;
+  font-stretch: condensed;
   transition: all 0.3s ease 0s;
   @media (any-hover: hover) {
     &:hover {
-      border: solid 1px $color__yellow;
-      background-color: $Very-dark-blue;
+      // border: solid 1px $color__yellow;
+      // background-color: $Very-dark-blue;
+      border: solid 1px $color__green;
+      background-color: $buttonHover;
     }
   }
   &._active {
@@ -32,7 +35,8 @@
     @media (any-hover: hover) {
       &:hover {
         border-color: transparent;
-        background-color: rgba($color: $color__green, $alpha: 0.8);
+        background-color: $buttonAccess;
+        // background-color: rgba($color: $color__green, $alpha: 0.8);
         box-shadow: 0 0 36px 0 rgba($color: $dark__text, $alpha: 0.8);
       }
     }

@@ -3,7 +3,7 @@
 .application {
   background-color: $Back;
   color: $Very-dark-blue;
-  @include adaptiveValue('padding-top', 183, 140);
+  @include adaptiveValue('padding-top', 272, 140);
   @include adaptiveValue('padding-bottom', 147, 48);
   &__container {
     @media (min-width: $mobile) {
@@ -14,14 +14,16 @@
   &__body {
     text-align: left;
     font-stretch: condensed;
-    @include adaptiveValue('margin-bottom', 116, 57);
+    @include adaptiveValue('margin-bottom', 110, 57);
   }
 
   &__title {
-    font-weight: 300;
+    font-stretch: condensed;
+    line-height: normal;
+    letter-spacing: normal;
     @include adaptiveValue('font-size', 72, 65);
     &:not(:last-child) {
-      @include adaptiveValue('margin-bottom', 30, 24);
+      @include adaptiveValue('margin-bottom', 28, 24);
     }
     &--bold {
       font-weight: 700;
@@ -33,8 +35,9 @@
     }
   }
   &__text {
-    font-size: rem(26);
-    font-weight: 300;
+    font-stretch: condensed;
+    line-height: normal;
+    letter-spacing: normal;
     &--bold {
       font-weight: 700;
     }
@@ -161,7 +164,7 @@
 
 .cart {
   min-height: rem(342);
-  padding: rem(36) rem(20);
+  padding: rem(42) rem(20);
   border-radius: 20px;
   box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.1);
   background-color: $LightGray;
@@ -175,11 +178,10 @@
     min-height: rem(330);
   }
   &__title {
-    margin: rem(24) 0 rem(2) 0;
+    margin: rem(24) 0;
     color: $Very-dark-blue;
-    font-weight: 700;
-    line-height: math.div(24, 18);
-    font-size: rem(18);
+
+    line-height: 1.33;
     text-transform: uppercase;
     font-stretch: condensed;
   }
@@ -200,6 +202,9 @@
       width: rem(90);
       height: rem(70);
       background: url('@img/solutions/about/virt.svg') center / cover no-repeat;
+    }
+    & .cart__title {
+      margin: rem(20) 0 rem(2) 0;
     }
   }
   &--digital {
@@ -243,7 +248,7 @@
     min-height: rem(430);
     display: grid;
     padding: 0;
-    @include adaptiveValue('column-gap', 117, 20);
+    // @include adaptiveValue('column-gap', 117, 20);
     @media (min-width: $mobile) {
       grid-template-columns: rem(382) 1fr;
       min-height: rem(560);
@@ -266,7 +271,8 @@
       // height: rem(324);
       z-index: 1;
       @media (min-width: $mobile) {
-        left: -95%;
+        // left: -95%;
+        left: rem(-446);
         width: auto;
         height: 100%;
       }
@@ -322,8 +328,8 @@
     max-width: rem(270);
     font-stretch: condensed;
     @include adaptiveValue('font-size', 26, 22);
-    font-weight: 300;
-    color: $color__green;
+    color: $dark__grey__blue;
+
     &:not(:last-child) {
       margin-bottom: rem(51);
     }
@@ -499,7 +505,7 @@
   }
   &__pagination {
     font-family: 'Koulen';
-    font-size: rem(48);
+    font-size: rem(62);
     color: $dark__grey__blue;
   }
   &__button {
@@ -526,14 +532,15 @@
 //==========================================================================================================================================
 
 .company {
-  padding-top: rem(110);
-  @include adaptiveValue('padding-bottom', 140, 110);
+  padding-top: rem(100);
+  @include adaptiveValue('padding-bottom', 150, 110);
   background-color: $bag;
 
   &__decor {
     position: absolute;
     background-color: $color__green;
     border: solid 1px $color__green;
+    border-radius: rem(20);
     transform: rotate(45deg);
     top: rem(-125);
     right: rem(-50);
@@ -543,8 +550,8 @@
     @media (min-width: $mobile) {
       width: rem(233);
       height: rem(233);
-      top: rem(-155);
-      right: rem(-155);
+      top: rem(-150);
+      right: rem(-122);
     }
   }
   &__container {
@@ -554,12 +561,16 @@
     text-align: center;
     position: relative;
     z-index: 2;
+    @media (width: 1440px) {
+      margin-left: rem(183);
+    }
   }
 
   &__title {
     color: $Very-dark-blue;
     font-weight: 300;
-    line-height: 1.08;
+    line-height: normal;
+    letter-spacing: normal;
     font-stretch: condensed;
     @include adaptiveValue('font-size', 72, 44);
     &--bold {
@@ -574,11 +585,13 @@
 
   &__subtitle {
     max-width: rem(750);
+    text-align: left;
     @include adaptiveValue('font-size', 26, 24);
-    font-weight: 300;
+    // font-weight: 300;
     font-stretch: condensed;
-    color: $color__green;
-    margin-top: rem(10);
+    color: $dark__grey__blue;
+
+    margin-top: rem(20);
     &:not(:last-child) {
       @include adaptiveValue('margin-bottom', 70, 48);
     }
@@ -588,7 +601,7 @@
     display: grid;
     justify-items: start;
     text-align: left;
-    gap: rem(15);
+    gap: rem(24);
   }
   &__text {
     @include adaptiveValue('margin-bottom', 0, 25);
@@ -606,7 +619,7 @@
     display: grid;
     grid-template-columns: rem(24) 1fr;
     align-items: center;
-    @include adaptiveValue('gap', 15, 24);
+    @include adaptiveValue('gap', 20, 24);
 
     &::before {
       content: '';
@@ -644,7 +657,7 @@
   &__container {
     display: grid;
     justify-items: center;
-    @include adaptiveValue('gap', 20, 24);
+    @include adaptiveValue('gap', 36, 24);
     position: relative;
     z-index: 2;
   }
@@ -656,13 +669,16 @@
     font-weight: 300;
     color: $Very-dark-blue;
     font-stretch: condensed;
-    &:not(:last-child) {
-      @include adaptiveValue('margin-bottom', 78, 46);
-    }
+    // &:not(:last-child) {
+    //   @include adaptiveValue('margin-bottom', 78, 46);
+    // }
     @media (min-width: $mobile) {
       font-weight: 700;
       line-height: 1;
     }
+  }
+  &__subtitle {
+    color: $dark__grey__blue;
   }
 
   &__cart {
@@ -686,6 +702,7 @@
   }
   @media (min-width: $mobile) {
     grid-template-columns: rem(175) 1fr;
+    padding: rem(29) rem(20) rem(36) rem(51);
 
     &--design {
       & .box__decor--arrow,
@@ -826,3 +843,17 @@
   }
 }
 //==========================================================================================================================================
+.slogan {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: $Very-dark-blue;
+  min-height: rem(100);
+  &__text {
+    @include adaptiveValue('font-size', 26, 16);
+    display: grid;
+    justify-items: center;
+    gap: rem(5);
+    color: $bag;
+  }
+}

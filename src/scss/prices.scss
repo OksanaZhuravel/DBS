@@ -2,12 +2,11 @@
 
 .prices {
   background-color: $Back;
-  @include adaptiveValue('padding-top', 190, 140);
+  @include adaptiveValue('padding-top', 282, 140);
   @include adaptiveValue('padding-bottom', 113, 48);
   position: relative;
   display: grid;
   justify-items: center;
-
   @media (min-width: $mobile) {
     &::before {
       content: '';
@@ -19,12 +18,13 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center bottom;
+      left: rem(266);
     }
   }
   @media (min-width: $tablet) {
     &::before {
-      max-height: rem(190);
-      max-width: rem(752);
+      max-height: rem(282);
+      max-width: 60%;
     }
   }
 
@@ -56,22 +56,20 @@
   }
 
   &__text {
-    line-height: math.div(35, 26);
-    font-size: rem(26);
-    font-weight: 300;
+    line-height: 1.3;
+
     color: $Very-dark-blue;
     &--bold {
       font-weight: 700;
     }
     &:not(:last-child) {
-      @include adaptiveValue('margin-bottom', 96, 46);
+      @include adaptiveValue('margin-bottom', 100, 46);
     }
   }
 
   &__subtitle {
     @include adaptiveValue('font-size', 26, 22);
 
-    font-weight: 700;
     text-transform: uppercase;
     color: $Very-dark-blue;
     font-stretch: condensed;
@@ -82,13 +80,13 @@
 
   &__excerpt {
     font-family: 'Roboto';
-    line-height: math.div(24, 17);
+    line-height: 1.41;
     font-size: rem(17);
-    // &:not(:last-child) {
-    //   margin-bottom: rem(20);
-    // }
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
     &--bottom {
-      margin-top: rem(40);
+      padding-top: rem(30);
     }
   }
 

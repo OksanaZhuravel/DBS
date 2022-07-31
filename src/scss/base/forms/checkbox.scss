@@ -35,6 +35,9 @@
   // .checkbox__text
   &__text {
     @include adaptiveValue('font-size', 14, 12);
+    [for='c_5'] & {
+      color: rgba($color: $mainColor, $alpha: 0.5);
+    }
     // .checkbox__link
     .checkbox__link {
       text-decoration: underline;
