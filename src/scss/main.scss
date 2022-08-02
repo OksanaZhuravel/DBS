@@ -88,7 +88,6 @@
 //==========================================================================================================================================
 .implementation {
   background-color: $Back;
-  // @include adaptiveValue('padding-bottom', 55, 12);
   @media (min-width: $mobile) {
     margin-top: rem(-65);
   }
@@ -99,7 +98,6 @@
   &__decor {
     padding: rem(20);
     display: grid;
-    // align-items: center;
     width: 100%;
     border-radius: 20px;
     box-shadow: 0 0 36px 0 rgba($color: $dark__text, $alpha: 0.1);
@@ -112,9 +110,8 @@
       }
     }
     @media (min-width: $mobile) {
-      // min-height: rem(320);
       padding: rem(40) rem(20);
-      grid-template-columns: 1fr minmax(rem(540), 1fr);
+      justify-items: center;
       img {
         grid-column: 1/2;
         top: rem(-35);
@@ -122,12 +119,15 @@
       }
     }
     @media (min-width: $tablet) {
-      // min-height: rem(362);
+      justify-items: left;
       min-height: rem(442);
+      grid-template-columns: 1fr minmax(rem(540), 1fr);
     }
   }
   &__inner {
-    grid-column: 2/3;
+    @media (min-width: $tablet) {
+      grid-column: 2/3;
+    }
   }
   &__title {
     font-weight: 300;
@@ -144,7 +144,7 @@
         text-transform: uppercase;
       }
     }
-    @media (min-width: $mobile) {
+    @media (min-width: $tablet) {
       margin-top: rem(88);
       margin-left: rem(15);
     }
@@ -165,19 +165,24 @@
     gap: rem(21);
     justify-items: center;
     counter-reset: myCount;
-    @media (min-width: $tablet) {
+    @media (min-width: $mobile) {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
   &__item {
-    width: auto;
-    // font-family: 'Roboto';
+    max-width: rem(353);
+    min-height: rem(353);
+    padding: rem(25) rem(22);
     color: $dark__text;
     font-size: rem(17);
     counter-increment: myCount;
     list-style-type: none;
     position: relative;
+    border-radius: 20px;
+    box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.1);
+    background-color: $bag;
+    transition: box-shadow 0.3s ease 0s;
     &:before {
       content: '0' counter(myCount);
       position: absolute;
@@ -199,23 +204,16 @@
       top: rem(95);
       left: rem(22);
     }
-    @media (min-width: $mobile) {
-      max-width: rem(353);
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.5);
+      }
     }
   }
 
   &__body {
     display: grid;
     align-items: center;
-    gap: rem(18);
-    padding: rem(25) rem(22);
-    // width: rem(275);
-    min-height: rem(353);
-    border-radius: 20px;
-    box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.1);
-    background-color: $bag;
-    transition: box-shadow 0.3s ease 0s;
-
     &::after {
       content: '';
       display: block;
@@ -226,30 +224,19 @@
       top: rem(130);
       left: rem(57);
     }
-    @media (any-hover: hover) {
-      &:hover {
-        box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.5);
-      }
-    }
-    @media (min-width: $mobile) {
-      min-height: rem(420);
-    }
-    @media (min-width: $tablet) {
-      min-height: rem(353);
-    }
   }
 
   &__img {
     display: block;
     padding-bottom: percent(40, 160);
+    margin-bottom: rem(20);
     &-ibg {
     }
-    &-contain {
+    --contain {
     }
   }
 
   &__title {
-    // font-family: 'Roboto Condensed';
     color: $Very-dark-blue;
     text-transform: uppercase;
     font-size: rem(38);
@@ -257,15 +244,29 @@
     font-stretch: condensed;
     letter-spacing: normal;
     text-align: center;
+    margin-top: rem(20);
+    @media (min-width: $mobile) {
+      margin-top: 0;
+    }
   }
 
   &__text {
+    margin-top: rem(20);
     font-family: 'Roboto';
     min-height: rem(150);
     line-height: 1.41;
+    border-left: solid 1px $color__green;
+    padding-left: rem(20);
+
     @media (min-width: $mobile) {
-      border-left: solid 1px $color__green;
-      padding-left: rem(20);
+      margin-top: rem(40);
+      font-size: rem(14);
+      line-height: 1.2;
+    }
+    @media (min-width: $tablet) {
+      margin-top: rem(20);
+      font-size: rem(17);
+      line-height: 1.41;
     }
   }
 }
@@ -540,6 +541,11 @@
     text-align: center;
     margin-bottom: rem(66);
     border-bottom: solid 1px $border;
+    input:-webkit-autofill {
+      -webkit-text-fill-color: none;
+      -webkit-box-shadow: 0 0 0px 1000px #f7f7f7 inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
   }
 
   &__input {

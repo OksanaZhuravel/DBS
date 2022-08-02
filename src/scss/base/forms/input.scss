@@ -12,9 +12,10 @@ textarea {
   border-radius: 0 !important;
   width: 100%;
   display: block;
-  padding: 0px 20px;
+  padding: 0 20px;
   border: 1px solid #eee;
   &._form-focus {
+    background-color: $Back;
   }
   &._form-error {
   }

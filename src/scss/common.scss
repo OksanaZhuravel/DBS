@@ -124,6 +124,11 @@
   &__item {
     width: 100%;
     @include adaptiveValue('margin-bottom', 35, 12);
+    input:-webkit-autofill {
+      -webkit-text-fill-color: none;
+      -webkit-box-shadow: 0 0 0px 1000px #f7f7f7 inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
   }
 
   &__input {
