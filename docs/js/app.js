@@ -608,6 +608,11 @@
         }
     }
     flsModules.popup = new Popup({});
+    function cookies() {
+        flsModules.popup.open("#cookies");
+    }
+    setTimeout(cookies, 2e3);
+    console.log(document.cookie);
     let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
         const targetBlockElement = document.querySelector(targetBlock);
         if (targetBlockElement) {
