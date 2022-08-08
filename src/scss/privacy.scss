@@ -1,0 +1,52 @@
+.privacy {
+  @include adaptiveValue('padding-top', 254, 140);
+  @include adaptiveValue('padding-bottom', 138, 48);
+  background-color: $Back;
+  &__container {
+    display: grid;
+    position: relative;
+  }
+
+  &__decor {
+    position: absolute;
+    background-color: $color__yellow;
+    border-radius: rem(20);
+    transform: rotate(45deg);
+    top: rem(-125);
+    right: rem(-50);
+    width: rem(126);
+    height: rem(126);
+    z-index: 1;
+    @media (min-width: $mobile) {
+      width: rem(233);
+      height: rem(233);
+      top: rem(-224);
+      right: rem(-142);
+    }
+  }
+
+  &__title {
+    color: $Very-dark-blue;
+    @include adaptiveValue('font-size', 65, 38);
+    line-height: 1.11;
+    letter-spacing: normal;
+    font-stretch: condensed;
+  }
+
+  &__body {
+    margin-top: rem(48);
+  }
+
+  &__text {
+    font-family: 'Roboto';
+    line-height: 1.25;
+    margin-top: rem(10);
+    &:not(:last-child) {
+      margin-bottom: rem(48);
+    }
+  }
+
+  &__subtitle {
+    color: $dark__grey__blue;
+  }
+}

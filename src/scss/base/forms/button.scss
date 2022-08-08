@@ -41,4 +41,25 @@
       }
     }
   }
+  &--cookies {
+    width: rem(125);
+    line-height: 1.29;
+    border-radius: 30px;
+    border: 1px solid $Back;
+    color: $LightGray;
+    padding: rem(12) rem(15);
+    letter-spacing: 0.44px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    @media (any-hover: hover) {
+      &:hover {
+        border: solid 1px $LightGray;
+        background-color: $Back;
+        color: $color__green;
+      }
+    }
+  }
 }

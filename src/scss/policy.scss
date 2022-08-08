@@ -1,0 +1,150 @@
+.policy {
+  @include adaptiveValue('padding-top', 254, 140);
+  @include adaptiveValue('padding-bottom', 138, 48);
+  background-color: $Back;
+  &__container {
+    display: grid;
+    position: relative;
+  }
+
+  &__decor {
+    position: absolute;
+    background-color: $color__red;
+    border-radius: 50%;
+    top: rem(-125);
+    right: rem(-50);
+    width: rem(126);
+    height: rem(126);
+    z-index: 1;
+    @media (min-width: $mobile) {
+      width: rem(233);
+      height: rem(233);
+      top: rem(-224);
+      right: rem(-142);
+    }
+  }
+
+  &__title {
+    color: $Very-dark-blue;
+    @include adaptiveValue('font-size', 65, 38);
+    line-height: 1.11;
+    letter-spacing: normal;
+    font-stretch: condensed;
+    &--color {
+      color: $color__green;
+      font-weight: 700;
+    }
+  }
+  &__data {
+    margin-top: rem(12);
+    margin-bottom: rem(48);
+  }
+
+  &__body {
+    @include adaptiveValue(' margin-bottom', 96, 24);
+  }
+
+  &__subtitle {
+    color: $dark__grey__blue;
+    margin-bottom: rem(48);
+  }
+
+  &__list {
+    margin-left: rem(60);
+    counter-reset: count;
+    display: grid;
+    gap: rem(10);
+    font-weight: 700;
+    @include adaptiveValue('font-size', 17, 14);
+    font-stretch: condensed;
+    line-height: 1.33;
+  }
+
+  &__item {
+    counter-increment: count;
+    font-family: 'Roboto';
+    color: $dark__grey__blue;
+    line-height: 1.25;
+    list-style-type: none;
+    position: relative;
+
+    a {
+      text-transform: uppercase;
+    }
+
+    &::before {
+      content: counter(count) '.';
+      font-weight: 700;
+      color: $color__green;
+      padding: 0 rem(8) 0 0;
+      position: absolute;
+      top: 0;
+      left: rem(-24);
+    }
+    @media (min-width: $mobile) {
+      &::before {
+        left: rem(-28);
+      }
+    }
+  }
+
+  &__content {
+    padding: 0 rem(10);
+  }
+  &__lists {
+    display: grid;
+    gap: rem(48);
+  }
+
+  &__dest {
+    @include adaptiveValue('font-size', 18, 12);
+    font-weight: 700;
+    font-stretch: condensed;
+    text-transform: uppercase;
+    margin-bottom: rem(10);
+    display: block;
+  }
+
+  &__text {
+    text-transform: none;
+    font-family: 'Roboto';
+    line-height: 1.25;
+
+    color: $mainColor;
+    font-weight: 400;
+
+    &:not(:last-child) {
+      margin-bottom: rem(48);
+    }
+  }
+
+  &__link {
+  }
+
+  &__sublist {
+    margin-left: rem(16);
+  }
+
+  &__subitem {
+    list-style: circle;
+    margin-bottom: rem(12);
+  }
+
+  &__sub {
+    &-sublist {
+      counter-reset: countcount;
+    }
+    &-subitem {
+      display: flex;
+      list-style: none;
+
+      &::before {
+        content: counter(count) '.' counter(countcount) '.';
+        counter-increment: countcount;
+        color: $color__green;
+        font-weight: 700;
+        padding: 0 rem(8) 0 0;
+      }
+    }
+  }
+}

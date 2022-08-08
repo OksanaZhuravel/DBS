@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20220802134716">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220808212330">
 	<link rel="icon" href="img/general/favicon.svg" type="image/svg+xml">
 	<!-- <script>
      window.history.replaceState({}, null, '/');
@@ -475,10 +475,10 @@
 												<a data-goto=".footer" href="" class="footer__link">Контакты</a>
 											</li>
 											<li class="footer__item">
-												<a href="" class="footer__link">Пользовательское соглашение</a>
+												<a href="policy.html" class="footer__link">Политика персональных данных</a>
 											</li>
 											<li class="footer__item">
-												<a href="" class="footer__link">Политика конфиденциальности</a>
+												<a href="privacy.html" class="footer__link">Политика cookies</a>
 											</li>
 										</ul>
 									</nav>
@@ -496,7 +496,9 @@
 					<p>&copy;&nbsp;2022 DBSSoft</p>
 				</div>
 			</div>
-		</footer>
+
+	</div>
+	</footer>
 	</div>
 	<div id="feedback" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
@@ -548,15 +550,12 @@
 								<label for="c_5" class="checkbox__label">
 									<span class="checkbox__text">Подтверждаю согласие на&nbsp;обработку своих персональных данных
 										и&nbsp;принимаю условия
-										<a href="" class="checkbox__link">Политики конфиденциальности</a> и&nbsp;<a href="" class="checkbox__link">Пользовательского соглашения</a>
+										<a href="policy.html" class="checkbox__link">Политики персональных данных</a> и&nbsp;<a href="privacy.html" class="checkbox__link">Политики cookies</a>
 									</span></label>
 							</div>
 							<div class="form__buttons">
 								<button type="submit" class="button button--access">Отправить</button>
 							</div>
-
-
-
 						</form>
 					</div>
 				</div>
@@ -573,7 +572,17 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220802134716"></script>
+
+	<div id="cookies" aria-hidden="true" class="cookies">
+		<div class="cookies__wrapper">
+			<div class=" cookies__content">
+				<p class=" cookies__text">Мы обрабатываем данные cookies для улучшения работы сайта и вашего удобства.
+					Пожалуйста, подтвердите ваше согласие на обработку файлов cookies согласно <a href="privacy.html" class="cookies__link">Политики cookies.</a></p>
+				<button type="button" data-close class="button button--cookies">Ok</button>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20220808212330"></script>
 </body>
 
 </html>

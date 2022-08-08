@@ -136,6 +136,22 @@ body {
       padding: 0 rem(math.div($containerPaddingAbout, 2));
     }
   }
+  [class='privacy__container'] {
+    @if ($maxWidthContainerAbout>0) {
+      max-width: rem($maxWidthContainerAbout);
+    }
+    @if ($containerPadding>0) {
+      padding: 0 rem(math.div($containerPadding, 2));
+    }
+  }
+  [class='policy__container'] {
+    @if ($maxWidthContainerAbout>0) {
+      max-width: rem($maxWidthContainerAbout);
+    }
+    @if ($containerPadding>0) {
+      padding: 0 rem(math.div($containerPadding, 2));
+    }
+  }
 } @else {
   // По брейк-поинтам
   [class*='__container'] {
@@ -180,6 +196,8 @@ body {
 @import 'solutions';
 @import 'about';
 @import 'prices';
+@import 'privacy';
+@import 'policy.scss';
 .page {
   &__capabilities {
   }
@@ -206,6 +224,10 @@ body {
   &__work {
   }
   &__access {
+  }
+  &-privacy {
+  }
+  &-policy {
   }
 }
 .nowrap {

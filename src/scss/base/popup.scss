@@ -31,11 +31,13 @@ body::after {
   overflow: auto;
   pointer-events: auto;
 }
-.popup_show .popup__content {
+.popup_show .popup__content,
+.popup_show .cookies__content {
   visibility: visible;
   transform: scale(1);
 }
-.popup__wrapper {
+.popup__wrapper,
+.cookies__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,7 +46,8 @@ body::after {
   width: 100%;
   justify-content: center;
 }
-.popup__content {
+.popup__content,
+.cookies__content {
   visibility: hidden;
   transform: scale(0);
   transition: transform 0.3s ease 0s;
