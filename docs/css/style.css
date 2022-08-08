@@ -636,10 +636,7 @@ body::after {
   bottom: 0;
   left: 0;
   right: 0;
-}
-
-.popup-show body::after .cookies {
-  background-color: transparent;
+  visibility: hidden;
 }
 
 .cookies__content {
