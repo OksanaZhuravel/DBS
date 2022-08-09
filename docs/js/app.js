@@ -608,11 +608,6 @@
         }
     }
     flsModules.popup = new Popup({});
-    function cookies() {
-        flsModules.popup.open("#cookies");
-    }
-    setTimeout(cookies, 2e3);
-    console.log(document.cookie);
     let gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
         const targetBlockElement = document.querySelector(targetBlock);
         if (targetBlockElement) {
@@ -4676,6 +4671,22 @@
             if (!activ.classList.contains("_active")) activ.classList.add("_active");
         }));
     }));
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") + "=([^;]*)"));
+        return matches ? decodeURIComponent(matches[1]) : void 0;
+    }
+    let cookiecook = getCookie("cookiecook"), cookiewin = document.getElementsByClassName("cookie")[0];
+    if ("no" != cookiecook) {
+        cookiewin.style.display = "block";
+        document.getElementById("cookie__close").addEventListener("click", (function() {
+            cookiewin.style.display = "none";
+            let date = new Date;
+            date.setDate(date.getDate() + 1);
+            document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();
+        }));
+    }
+    console.log(cookiecook);
+    console.log(document.cookie);
     isWebp();
     menuInit();
     spollers();

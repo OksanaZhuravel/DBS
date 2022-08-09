@@ -453,8 +453,8 @@ class Popup {
 // Запускаем и добавляем в объект модулей
 flsModules.popup = new Popup({});
 
-function cookies() {
-  flsModules.popup.open('#cookies');
-}
-setTimeout(cookies, 2000);
-console.log(document.cookie);
+// function cookies() {
+//   flsModules.popup.open('#cookies');
+// }
+// setTimeout(cookies, 2000);
+// console.log(document.cookie);

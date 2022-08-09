@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20220808214857">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220809130551">
 	<link rel="icon" href="img/general/favicon.svg" type="image/svg+xml">
 	<!-- <script>
      window.history.replaceState({}, null, '/');
@@ -28,7 +28,7 @@
 						<li class="menu__item"><a href="about.html" class="menu__link undefined">О компании</a></li>
 						<li class="menu__item"><a href="solutions.html" class="menu__link undefined">Решения</a></li>
 						<li class="menu__item"><a href="prices.html" class="menu__link undefined">Стоимость услуг</a></li>
-						<li class="menu__item"><a data-goto=".footer" href="" class=" menu__link">Контакты</a></li>
+						<li class="menu__item"><a data-goto=".footer" href="" class="menu__link">Контакты</a></li>
 					</ul>
 				</nav>
 				<a href="" data-damax=".menu, 767.98, last" data-popup="#feedback" class="header__button button"><span>Попробовать</span></a>
@@ -244,17 +244,18 @@
 			</div>
 		</div>
 	</div>
-
-	<div id="cookies" aria-hidden="true" class="cookies">
-		<div class="cookies__wrapper">
-			<div class=" cookies__content">
-				<p class=" cookies__text">Мы обрабатываем данные cookies для улучшения работы сайта и вашего удобства.
-					Пожалуйста, подтвердите ваше согласие на обработку файлов cookies согласно <a href="privacy.html" class="cookies__link">Политики cookies.</a></p>
-				<button type="button" data-close class="button button--cookies">Ok</button>
+	<div class="cookie" id="cookie" aria-hidden="true">
+		<div class="cookie__notice">
+			<p class="cookie__text">Мы обрабатываем данные cookies для улучшения работы сайта и вашего удобства.
+				Пожалуйста, подтвердите ваше согласие на обработку файлов cookies согласно
+				<a class="cookie__link" href="privacy.html">Политики cookies.</a>
+			</p>
+			<div>
+				<a data-close class="button button--cookie" id="cookie__close" href="">Ok</a>
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220808214857"></script>
+	<script src="js/app.min.js?_v=20220809130551"></script>
 </body>
 
 </html>

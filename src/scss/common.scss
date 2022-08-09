@@ -76,18 +76,18 @@
     }
   }
 }
+
 //==========================================================================================================================================
 
-.cookies {
+.cookie {
+  display: none;
   position: fixed;
+  z-index: 150;
   bottom: 0;
   left: 0;
   right: 0;
-  visibility: hidden;
-  &__wrapper {
-  }
-
-  &__content {
+  &__notice {
+    margin: 0 auto;
     display: grid;
     justify-items: center;
     position: relative;
@@ -98,13 +98,13 @@
     background-color: $color__green;
     color: $Back;
     padding: rem(24);
+
     @media (min-width: $mobile) {
       grid-template-columns: 1fr rem(125);
       gap: rem(70);
       padding: rem(24) rem(113);
     }
   }
-
   &__text {
     font-family: 'Roboto';
     line-height: 1.29;
@@ -118,6 +118,8 @@
   }
 
   &__link {
+    text-decoration: underline;
+    outline: none;
   }
 }
 
