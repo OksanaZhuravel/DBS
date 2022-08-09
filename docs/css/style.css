@@ -3308,6 +3308,10 @@ body::after {
 
 .privacy__subtitle {
   color: #434c52;
+  line-height: 1.2;
+  font-stretch: condensed;
+  text-transform: uppercase;
+  margin-bottom: 0.625rem;
 }
 
 .policy {
@@ -3628,9 +3632,9 @@ body::after {
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
     row-gap: 0.3125rem;
-    -webkit-column-gap: 1rem;
-       -moz-column-gap: 1rem;
-            column-gap: 1rem;
+    -webkit-column-gap: 0.75rem;
+       -moz-column-gap: 0.75rem;
+            column-gap: 0.75rem;
   }
 
   .footer__container {
@@ -3640,6 +3644,10 @@ body::after {
   .footer__body {
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .footer__logo {
+    margin: 1.25rem 0;
   }
 
   .spollers__title--visibility {
@@ -3936,6 +3944,10 @@ body::after {
     height: 14.5625rem;
     top: -14rem;
     right: -8.875rem;
+  }
+
+  .privacy__subtitle {
+    line-height: 1;
   }
 
   .policy__decor {

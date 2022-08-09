@@ -69,6 +69,9 @@
 
   &__logo {
     margin: rem(40) 0 rem(45) 0;
+    @media (min-width: $mobile) {
+      margin: rem(20) 0;
+    }
     @media (min-width: $tablet) {
       margin: rem(-100) 0 rem(38) 0;
     }

@@ -99,7 +99,7 @@
     @media (min-width: $mobile) {
       flex-flow: row wrap;
       row-gap: rem(5);
-      column-gap: rem(16);
+      column-gap: rem(12);
     }
     @media (min-width: $tablet) {
       column-gap: rem(45);

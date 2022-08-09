@@ -48,5 +48,12 @@
 
   &__subtitle {
     color: $dark__grey__blue;
+    line-height: 1.2;
+    font-stretch: condensed;
+    text-transform: uppercase;
+    margin-bottom: rem(10);
+    @media (min-width: $mobile) {
+      line-height: 1;
+    }
   }
 }
