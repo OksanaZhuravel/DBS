@@ -171,7 +171,7 @@ export function stickyBlock() {
 
   function stickyBlockItem(stickyParent, stickyConfig) {
     const stickyBlockItem = stickyParent.querySelector('[data-sticky-item]');
-    console.log(stickyBlockItem);
+    // console.log(stickyBlockItem);
     const headerHeight = stickyConfig.header;
     const offsetTop = headerHeight + stickyConfig.top;
     const startPoint =

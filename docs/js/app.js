@@ -4434,7 +4434,6 @@
         }
         function stickyBlockItem(stickyParent, stickyConfig) {
             const stickyBlockItem = stickyParent.querySelector("[data-sticky-item]");
-            console.log(stickyBlockItem);
             const headerHeight = stickyConfig.header;
             const offsetTop = headerHeight + stickyConfig.top;
             const startPoint = stickyBlockItem.getBoundingClientRect().top + scrollY - offsetTop;
