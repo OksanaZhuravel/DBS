@@ -1,0 +1,274 @@
+.product {
+  @include adaptiveValue('padding-top', 254, 140);
+  @include adaptiveValue('padding-bottom', 90, 40);
+
+  background-color: $Back;
+  &__decor {
+    position: absolute;
+    background-color: $color__green;
+    border: solid 1px $color__green;
+    border-radius: rem(20);
+    transform: rotate(45deg);
+    top: rem(-125);
+    right: rem(-50);
+
+    width: rem(126);
+    height: rem(126);
+    z-index: 1;
+    @media (min-width: $mobile) {
+      width: rem(233);
+      height: rem(233);
+
+      top: rem(-240);
+      right: rem(-142);
+    }
+  }
+  &__container {
+    position: relative;
+    display: grid;
+  }
+  &__media {
+    position: relative;
+    z-index: 1;
+    @include adaptiveValue('top', -95, 0);
+    order: 2;
+    img {
+      max-width: 100%;
+    }
+    @media (min-width: $mobile) {
+      order: 1;
+      // top: 0;
+      right: rem(-160);
+      width: 70%;
+      position: absolute;
+    }
+    // @media (min-width: $tablet) {
+    //   // top: -95px;
+    // }
+  }
+  &__body {
+    position: relative;
+    z-index: 2;
+    order: 1;
+    @include adaptiveValue('margin-bottom', 150, 24);
+    max-width: rem(592);
+    @media (min-width: $tablet) {
+      order: 2;
+    }
+  }
+
+  &__title {
+    display: grid;
+    color: $dark__grey__blue;
+    @include adaptiveValue('font-size', 72, 38);
+    // font-weight: 300;
+    letter-spacing: normal;
+    font-stretch: condensed;
+
+    &--color {
+      color: $color__green;
+    }
+  }
+
+  &__subtitle {
+    line-height: 1.35;
+    @include adaptiveValue('max-width', 560, 480);
+    margin: rem(32) 0 0 0;
+    @include adaptiveValue('font-size', 26, 18);
+  }
+
+  &__list {
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue('column-gap', 36, 2);
+    row-gap: rem(12);
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    @media (min-width: $mobile) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+  }
+
+  &__link {
+    font-family: 'Roboto';
+    font-size: rem(17);
+    display: block;
+    border-radius: 30px;
+    padding: rem(20) rem(35);
+    background-color: $productItem;
+    transition: all 0.6s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $mainColor;
+        color: $productItem;
+      }
+    }
+  }
+}
+//==========================================================================================================================================
+
+.environment {
+  @include adaptiveValue('padding-bottom', 107, 40);
+
+  background-color: $Back;
+  &__container {
+  }
+
+  &__title {
+    max-width: rem(470);
+    color: $color__green;
+    font-family: 'Roboto';
+    font-weight: 500;
+    line-height: 1.35;
+    &:not(:last-child) {
+      margin-bottom: rem(31);
+    }
+  }
+
+  &__text {
+    font-family: 'Roboto';
+    line-height: 1.29;
+    font-size: rem(17);
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__button {
+    @media (min-width: $mobile) {
+      margin-top: rem(76);
+    }
+  }
+}
+
+//==========================================================================================================================================
+
+.system {
+  @include adaptiveValue('padding-top', 93, 40);
+  @include adaptiveValue('padding-bottom', 80, 40);
+  background-color: $LightGray;
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    color: $dark__grey__blue;
+    @include adaptiveValue('font-size', 72, 38);
+    font-weight: 300;
+    font-stretch: condensed;
+    &:not(:last-child) {
+      @include adaptiveValue(' margin-bottom', 78, 48);
+      // margin-bottom: rem(78);
+    }
+  }
+
+  &__box {
+    box-shadow: 0 0 36px 0 $productItem;
+    background-color: $LightGray;
+    border-radius: 20px;
+    display: grid;
+    transition: box-shadow 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0 0 36px 0 rgba($color: $productItem, $alpha: 0.5);
+      }
+    }
+    @media (min-width: $mobile) {
+      grid-template-columns: rem(290) 1fr;
+    }
+  }
+
+  &__navigation {
+    border-radius: 20px;
+    padding: 48px 34px;
+    background-color: $dark__grey__blue;
+    display: grid;
+    gap: rem(17);
+    justify-items: start;
+    align-items: center;
+    @media (min-width: $mobile) {
+      border-radius: 20px 0 0 20px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    span {
+      text-transform: none;
+      font-family: 'Roboto';
+      @include adaptiveValue('font-size', 17, 14);
+      // font-size: rem(17);
+      &:before {
+        margin-right: rem(10);
+        font-size: 21px;
+        font-family: 'icon';
+      }
+    }
+    &._tab-active {
+      span {
+        color: $Back;
+      }
+    }
+  }
+
+  &__content {
+    padding: rem(66) rem(48);
+  }
+
+  &__body {
+  }
+  &__inner {
+    display: grid;
+    row-gap: rem(20);
+    column-gap: rem(14);
+    text-align: left;
+    grid-template-columns: 77px 1fr;
+  }
+  &__img {
+    width: rem(77);
+    height: rem(77);
+  }
+  &__count {
+    align-self: flex-end;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto';
+    line-height: 1.29;
+    font-size: rem(17);
+    border: solid 1px $color__green;
+    width: rem(33);
+    height: rem(33);
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      border: solid 1px $LightGray2;
+      width: rem(33);
+      height: rem(33);
+      display: block;
+    }
+    &:before {
+      content: '';
+      top: rem(0);
+      left: rem(44);
+    }
+    &::after {
+      content: '';
+      top: rem(-44);
+      left: rem(0);
+    }
+  }
+  &__text {
+    grid-column: 1/3;
+    font-family: 'Roboto';
+    line-height: 1.29;
+    font-size: rem(17);
+  }
+}

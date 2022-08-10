@@ -842,18 +842,3 @@
     }
   }
 }
-//==========================================================================================================================================
-.slogan {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  background-color: $Very-dark-blue;
-  min-height: rem(100);
-  &__text {
-    @include adaptiveValue('font-size', 26, 16);
-    display: grid;
-    justify-items: center;
-    gap: rem(5);
-    color: $bag;
-  }
-}

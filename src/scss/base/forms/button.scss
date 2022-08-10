@@ -62,4 +62,18 @@
       }
     }
   }
+  &--environment {
+    // width: rem(200);
+    padding: rem(17) rem(30);
+    font-size: rem(21);
+    color: $bag;
+    font-stretch: condensed;
+    border-radius: rem(30);
+    background-color: $color__green;
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: transparent;
+      }
+    }
+  }
 }

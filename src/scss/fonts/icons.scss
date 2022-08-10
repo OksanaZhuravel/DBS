@@ -1,0 +1,46 @@
+%ic {
+  font-family: 'icon';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class*=' icon-'] {
+  &::before {
+    @extend %ic;
+    display: block;
+  }
+}
+.icon-chart:before {
+  content: '\e801';
+} /* '' */
+.icon-popup:before {
+  content: '\e802';
+} /* '' */
+.icon-clock:before {
+  content: '\e804';
+} /* '' */
+.icon-docs:before {
+  content: '\f0c5';
+} /* '' */
+.icon-building:before {
+  content: '\f0f7';
+} /* '' */
+.icon-hospital:before {
+  content: '\f0f8';
+} /* '' */
+.icon-file:before {
+  content: '\f1c9';
+} /* '' */
+.icon-address:before {
+  content: '\f2bc';
+} /* '' */
+.icon-card:before {
+  content: '\f2c3';
+} /* '' */
+.icon-window:before {
+  content: '\f2d2';
+} /* '' */

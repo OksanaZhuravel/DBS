@@ -5,8 +5,176 @@
   <body>
     <div class="wrapper">
       @@include('html/_header.htm',{})
-      <main class="page-product page">
-        <h1>Продукт</h1>
+      <main class="page-product page" data-sticky data-sticky-header>
+        <section class="product">
+
+          <div class="product__container">
+            <div class="product__media"><img src="@img/product/agency.svg" alt="Цифровое рекламное агентство"></div>
+            <!-- width="1080" height="705" -->
+            <div class="product__decor"></div>
+            <div class="product__body">
+
+              <h1 class="product__title"><span class="product__title product__title--color">Цифровое</span>
+                рекламное агентство</h1>
+              <h3 class="product__subtitle">Решение представляет собой полноценный функционал работы медийного
+                рекламного агентства как для сотрудников агентства, так и&nbsp;его клиентов.</h3>
+
+
+            </div>
+            <ul class="product__list">
+              <li class="product__item"><a data-goto-header data-goto="#system" href="" class="product__link">Основные
+                  блоки</a></li>
+              <li class="product__item"><a href="" class="product__link">Основные преимущества</a></li>
+              <li class="product__item"><a href="" class="product__link">Порядок подключения</a></li>
+
+            </ul>
+          </div>
+        </section>
+        <section class="environment page-environment">
+          <div class="environment__container">
+            <h3 class="environment__title">Цифровая среда для осуществления
+              работы рекламного агентства </h3>
+            <p class="environment__text">Наша команда кастомизировала приложение DBS-Soft, которое представляет
+              полноценный функционал работы медийного рекламного агентства. Его ключевым преимуществом является
+              универсальность: доступ к&nbsp;системе открыт как сотрудникам, так и&nbsp;клиентам&nbsp;&mdash;
+              сотрудникам отделов закупки и
+              внешним партнерам. </p>
+            <p class="environment__text">Центром работы системы является интерфейс сотрудника рекламного агентства -
+              единое информационное поле, в&nbsp;котором он&nbsp;может быстро сориентироваться и&nbsp;моментально
+              включиться в&nbsp;работу
+              на&nbsp;любом этапе.</p>
+            <p class="environment__text">Клиенты агентства через систему могут создавать брифы, получать отчеты,
+              управлять текущими проектами по&nbsp;размещению рекламы, вести согласование документов и&nbsp;электронный
+              документооборот. Система полностью интегрирована с&nbsp;современными платформами ЭДО. При этом все
+              созданные
+              документы всегда под рукой: ничего не&nbsp;потеряется и&nbsp;не&nbsp;пропадет.</p>
+            <p class="environment__text">Также к&nbsp;системе имеют доступ те&nbsp;сотрудники, которые обычно остаются
+              в&nbsp;тени &mdash;
+              это департаменты баинга, исследований, бухгалтерия и&nbsp;юристы, поставщики и&nbsp;подрядчики. Благодаря
+              доступу в
+              систему они также не&nbsp;теряются в&nbsp;процессе, быстро видят обратную связь по&nbsp;своим проектам
+              и&nbsp;могут &laquo;на&nbsp;лету&raquo;
+              вносить изменения в&nbsp;процессе работы.</p>
+            <p class="environment__text">Благодаря огромному функционалу система позволяет легко следить
+              за&nbsp;загрузкой
+              команд на&nbsp;разных проектах, вести консолидированный контроль исполнения сроков, декомпозировать задачи
+              и
+              внедрять проектные команды при необходимости, а&nbsp;также вести логирование всех событий и&nbsp;действий,
+              чтобы
+              иметь возможность найти и&nbsp;устранить проблемные точки.</p>
+            <p class="environment__text">Потенциал в&nbsp;оптимизации рабочего времени&nbsp;&mdash; примерно до&nbsp;30%
+              сокращения ручного
+              труда. Также очень важным параметром эффективности является увеличение скорости проведения цикла рекламной
+              кампании&nbsp;&mdash; количество времени, которое закладывается на&nbsp;процедурные задачи можно сократить
+              в&nbsp;2-3&nbsp;раза, а
+              это значит, что рекламные кампании будут запускаться вовремя, документы будут возникать в&nbsp;правильном
+              виде,
+              как результат сократится дебиторская задолженность, а&nbsp;оплаты кампаний будут происходить
+              по&nbsp;графику.</p>
+            <button data-popup="#feedback" class="button button--environment environment__button">Запросить
+              демо</button>
+          </div>
+        </section>
+        <section class="page-system system" id="system">
+          <div class="system__container">
+            <h2 class="system__title">Основные блоки системы</h2>
+            <div data-tabs class="system__box">
+              <nav data-tabs-titles class="system__navigation">
+                <button type="button" class="system__subtitle _tab-active"><span
+                    class="icon-chart">Бизнес</span></button>
+                <button type="button" class="system__subtitle"><span class="icon-clock">CRM</span></button>
+                <button type="button" class="system__subtitle"><span class="icon-popup">Корпоративный
+                    портал</span></button>
+                <button type="button" class="system__subtitle"><span class="icon-docs">Документооборот</span></button>
+                <button type="button" class="system__subtitle"><span class="icon-file">Блок IT</span></button>
+                <button type="button" class="system__subtitle"><span class="icon-building">Блок АХО</span></button>
+                <button type="button" class="system__subtitle"><span class="icon-address">Блок HR</span></button>
+              </nav>
+              <div data-tabs-body class="system__content">
+                <div class="system__body">
+                  <div class="system__inner">
+                    <div class="system__img">
+                      <img src="@img/product/bisiness.svg" alt="Бизнес" />
+                    </div>
+                    <span class="system__count">01</span>
+                    <span class="system__text">Блок “Бизнес” состоит из ряда процессов, охватывающих всё
+                      взаимодействие внутри рекламного агентства от момента поступления заявки от клиента до момента
+                      выполнения заказа. Процессы могут быть последовательными, асинхронными или гибридными, в
+                      зависимости
+                      от архитектуры и логики процессов в компании. Логи, аналитика, тайминг: вся информация о текущих
+                      процессах, статусах и загрузке сотрудников.</span>
+                  </div>
+                </div>
+                <div class="system__body">
+                  <div class="system__inner">
+                    <div class="system__img">
+                      <img src="@img/product/bisiness.svg" alt="CRM" />
+                    </div>
+                    <span class="system__count">02</span>
+                    <span class="system__text">Блок CRM состоит из ряда процессов, охватывающих всё
+                      взаимодействие внутри рекламного агентства от момента поступления заявки от клиента до момента
+                      выполнения заказа. Процессы могут быть последовательными, асинхронными или гибридными, в
+                      зависимости
+                      от архитектуры и логики процессов в компании.</span>
+                  </div>
+                </div>
+                <div class="system__body">
+                  <div class="system__inner">
+                    <div class="system__img">
+                      <img src="@img/product/bisiness.svg" alt="Корпоративный портал" />
+                    </div><span class="system__count">03</span>
+                    <span class="system__text">Блок Корпоративный портал состоит из ряда процессов. Логи, аналитика,
+                      тайминг: вся информация о текущих процессах, статусах и загрузке сотрудников.</span>
+                  </div>
+                </div>
+                <div class="system__body">
+                  <div class="system__inner">
+                    <div class="system__img">
+                      <img src="@img/product/bisiness.svg" alt="Документооборот" />
+                    </div><span class="system__count">04</span>
+                    <span class="system__text">Блок Документооборот процессов в компании. Логи, аналитика, тайминг: вся
+                      информация о текущих
+                      процессах, статусах и загрузке сотрудников.</span>
+                  </div>
+                </div>
+                <div class="system__body">
+                  <div class="system__inner">
+                    <div class="system__img">
+                      <img src="@img/product/bisiness.svg" alt="Блок IT" />
+                    </div><span class="system__count">05</span>
+                    <span class="system__text">Блок Блок IT состоит из ряда процессов, охватывающих всё
+                      взаимодействие внутри рекламного агентства </span>
+                  </div>
+                </div>
+                <div class="system__body">
+                  <div class="system__inner">
+                    <div class="system__img">
+                      <img src="@img/product/bisiness.svg" alt="Блок АХО" />
+                    </div><span class="system__count">06</span>
+                    <span class="system__text">Блок Блок АХО. Процессы могут быть последовательными, асинхронными или
+                      гибридными, в
+                      зависимости
+                      от архитектуры и логики процессов в компании.</span>
+                  </div>
+                </div>
+                <div class="system__body">
+                  <div class="system__inner">
+                    <div class="system__img">
+                      <img src="@img/product/bisiness.svg" alt="Блок HR" />
+                    </div><span class="system__count">07</span>
+                    <span class="system__text">Блок Блок HR Процессы могут быть последовательными, асинхронными или
+                      гибридными, в
+                      зависимости
+                      от архитектуры и логики процессов в компании.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div data-goto=".product__list" data-sticky-item class="scroll">
+          <a href="#" class="scroll__link"></a>
+        </div>
       </main>
       @@include('html/_footer.htm',{})
     </div>

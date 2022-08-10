@@ -4680,7 +4680,7 @@
         document.getElementById("cookie__close").addEventListener("click", (function() {
             cookiewin.style.display = "none";
             let date = new Date;
-            date.setDate(date.getDate() + 1);
+            date.setDate(date.getDate() + 30);
             document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();
         }));
     }
