@@ -104,11 +104,13 @@
 }
 .projects {
   &__navigation {
+    display: flex;
     ._tab-spoller & {
       display: none;
     }
   }
   &__content {
+    min-height: rem(422);
   }
   &__title {
     font-weight: 700;

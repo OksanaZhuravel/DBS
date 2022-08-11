@@ -13,8 +13,6 @@
   transition: all 0.3s ease 0s;
   @media (any-hover: hover) {
     &:hover {
-      // border: solid 1px $color__yellow;
-      // background-color: $Very-dark-blue;
       border: solid 1px $color__green;
       background-color: $buttonHover;
     }
@@ -63,7 +61,7 @@
     }
   }
   &--environment {
-    // width: rem(200);
+    width: rem(220);
     padding: rem(17) rem(30);
     font-size: rem(21);
     color: $bag;

@@ -187,10 +187,10 @@ export function stickyBlock() {
         scrollY -
         (offsetTop + stickyBlockItem.offsetHeight + stickyConfig.bottom);
       let stickyItemValues = {
-        position: 'relative',
-        bottom: 'auto',
-        top: 'auto',
-        right: '10px',
+        // position: 'relative',
+        // bottom: 'auto',
+        // top: 'auto',
+        // right: '10px',
         // width: 'auto',
       };
       if (!stickyConfig.media || stickyConfig.media < window.innerWidth) {

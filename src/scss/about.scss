@@ -1,7 +1,8 @@
 //==========================================================================================================================================
 .about {
   background-color: $Back;
-  @include adaptiveValue('padding-top', 278, 140);
+  @include adaptiveValue('padding-top', 278, 110);
+  // @include adaptiveValue('padding-top', 278, 140);
   @include adaptiveValue('padding-bottom', 147, 48);
   position: relative;
   display: grid;
@@ -49,7 +50,8 @@
     color: $Very-dark-blue;
     font-stretch: condensed;
     &:not(:last-child) {
-      @include adaptiveValue('margin-bottom', 78, 46);
+      @include adaptiveValue('margin-bottom', 78, 24);
+      // @include adaptiveValue('margin-bottom', 78, 46);
     }
   }
 

@@ -51,7 +51,7 @@
     z-index: 2;
     order: 1;
     @include adaptiveValue('margin-bottom', 150, 24);
-    max-width: rem(592);
+    // max-width: rem(592);
     @media (min-width: $tablet) {
       order: 2;
     }
@@ -117,6 +117,7 @@
 
   background-color: $Back;
   &__container {
+    display: grid;
   }
 
   &__title {
@@ -140,6 +141,7 @@
   }
 
   &__button {
+    margin-top: rem(44);
     @media (min-width: $mobile) {
       margin-top: rem(76);
     }
@@ -270,5 +272,229 @@
     font-family: 'Roboto';
     line-height: 1.29;
     font-size: rem(17);
+  }
+}
+//==========================================================================================================================================
+
+.benefits {
+  @include adaptiveValue('padding-top', 93, 40);
+  @include adaptiveValue('padding-bottom', 96, 40);
+  background-color: $Back;
+  &__container {
+  }
+
+  &__title {
+    text-align: center;
+    color: $dark__grey__blue;
+    @include adaptiveValue('font-size', 72, 38);
+    font-weight: 300;
+    font-stretch: condensed;
+    &:not(:last-child) {
+      @include adaptiveValue(' margin-bottom', 80, 48);
+    }
+  }
+
+  &__box {
+    display: grid;
+    gap: rem(12);
+  }
+
+  &__content {
+    cursor: pointer;
+    background-color: $bag;
+    box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.1);
+    padding: rem(12) rem(12);
+    border-radius: 20px;
+    transition: box-shadow 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.5);
+      }
+    }
+    @media (min-width: $mobile) {
+      padding: rem(32) rem(51);
+    }
+  }
+
+  &__details {
+  }
+
+  &__summary {
+    list-style: none;
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      right: rem(5);
+      top: 50%;
+      background-color: $color__green;
+      height: 2px;
+      width: rem(10);
+      transition: transform 0.5s ease 0s;
+    }
+    &::before {
+      transform: translate(-75%, -50%) rotate(40deg);
+    }
+    &::after {
+      transform: translate(0, -50%) rotate(-40deg);
+    }
+    .benefits__details[open] & {
+      &::before {
+        transform: translateX(-75%) rotate(-40deg);
+      }
+      &::after {
+        transform: rotate(40deg);
+      }
+    }
+    @media (min-width: $tablet) {
+      &::before,
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__subtitle {
+    display: grid;
+    text-transform: uppercase;
+    color: $dark__grey__blue;
+    font-stretch: condensed;
+    line-height: 1.33;
+    @include adaptiveValue('font-size', 18, 16);
+    @media (min-width: $mobileSmall) {
+      display: block;
+    }
+  }
+
+  &__cart {
+  }
+}
+//==========================================================================================================================================
+
+.connection {
+  @include adaptiveValue('padding-top', 96, 40);
+  @include adaptiveValue('padding-bottom', 96, 40);
+  background-color: $LightGray;
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    color: $dark__grey__blue;
+    @include adaptiveValue('font-size', 72, 38);
+    font-weight: 300;
+    font-stretch: condensed;
+    &:not(:last-child) {
+      @include adaptiveValue('margin-bottom', 78, 48);
+      // margin-bottom: rem(78);
+    }
+  }
+
+  &__tabs {
+    text-align: left;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    @media (min-width: $mobile) {
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+  &__button {
+    font-family: 'Roboto';
+    line-height: 1.29;
+    font-size: rem(17);
+    color: $Back;
+    text-transform: uppercase;
+    padding: rem(20);
+    background-color: $dark__grey__blue;
+    border: solid 1px transparent;
+    border-radius: 20px;
+    @media (min-width: $mobile) {
+      padding: rem(20) rem(53);
+
+      &:first-child {
+        border-radius: 20px 0 0 0;
+      }
+      &:last-child {
+        border-radius: 0 20px 0 0;
+      }
+    }
+
+    &._tab-active {
+      background-color: $color__green;
+      border: solid 1px $color__green;
+    }
+  }
+  &__content {
+    min-height: rem(380);
+    background-color: $Back;
+    width: 100%;
+    padding: rem(48) rem(40);
+    border-radius: 20px;
+    box-shadow: 0 0 36px 0 rgba($color: $connection, $alpha: 0.5);
+    transition: box-shadow 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        box-shadow: 0 0 36px 0 rgba($color: $connection, $alpha: 0.8);
+      }
+    }
+  }
+
+  &__body {
+  }
+
+  &__subtitle {
+    display: block;
+    font-family: 'Roboto';
+    line-height: 1.41;
+    font-size: rem(17);
+    color: $dark__grey__blue;
+    font-weight: 700;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      margin-bottom: rem(37);
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: rem(20);
+  }
+
+  &__item {
+    display: grid;
+    gap: rem(10);
+    font-family: 'Roboto';
+    line-height: 1.29;
+    font-size: rem(17);
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__text {
+    &--color {
+      color: $color__green;
+    }
+    &--bold {
+      font-weight: 700;
+      color: $dark__grey__blue;
+    }
+  }
+
+  &__link {
+    transition: color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $color__yellow;
+      }
+    }
   }
 }

@@ -37,6 +37,7 @@ $dark: #393939;
 $buttonHover: #4e5960;
 $buttonAccess: #00ce50;
 $productItem: #e5e7ec;
+$connection: #dbdbdb;
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
 // Минимальная ширина страницы
 $minWidth: 320;
@@ -44,7 +45,7 @@ $minWidth: 320;
 $maxWidth: 1366;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
 $maxWidthContainer: 1134;
-$maxWidthContainerAbout: 740;
+$maxWidthContainerAbout: 753;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 48;
@@ -161,6 +162,14 @@ body {
       padding: 0 rem(math.div($containerPadding, 2));
     }
   }
+  [class='benefits__container'] {
+    @if ($maxWidthContainerAbout>0) {
+      max-width: rem($maxWidthContainerAbout);
+    }
+    @if ($containerPadding>0) {
+      padding: 0 rem(math.div($containerPadding, 2));
+    }
+  }
 } @else {
   // По брейк-поинтам
   [class*='__container'] {
@@ -243,6 +252,10 @@ body {
   &-environment {
   }
   &-system {
+  }
+  &-benefits {
+  }
+  &-connection {
   }
 }
 .nowrap {
