@@ -41,3 +41,25 @@ if (cookiecook != 'no') {
 }
 console.log(cookiecook);
 console.log(document.cookie);
+
+// let box = document.querySelector('.benefits__box');
+// let details = box
+//   .querySelectorAll('.benefits__details')
+//   .forEach(function (detail) {
+//     detail.addEventListener('click', function (e) {
+//       if (!detail.hasAttribute('open')) {
+//         detail.setAttribute('open', true);
+//       } else {
+//         detail.setAttribute('open', '-');
+//       }
+//     });
+//   });
+// console.log(box);
+// console.log(details);
+//   .forEach(function (activ) {
+//   activ.addEventListener('click', function (e) {
+//     if (!activ.classList.contains('_active')) {
+//       activ.classList.add('_active');
+//     }
+//   });
+// });

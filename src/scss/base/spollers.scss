@@ -33,7 +33,7 @@
       top: 50%;
       background-color: $color__green;
       height: 2px;
-      width: 15px;
+      width: rem(10);
       transition: transform 0.5s ease 0s;
     }
     &::before {

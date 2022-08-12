@@ -243,6 +243,7 @@ export function spollers() {
     // Инициализация
     function initSpollers(spollersArray, matchMedia = false) {
       spollersArray.forEach((spollersBlock) => {
+        // console.log(spollersBlock);
         spollersBlock = matchMedia ? spollersBlock.item : spollersBlock;
         if (matchMedia.matches || !matchMedia) {
           spollersBlock.classList.add('_spoller-init');
@@ -255,9 +256,12 @@ export function spollers() {
         }
       });
     }
+    // console.log(spollersArray[0].children);
+
     // Работа с контентом
     function initSpollerBody(spollersBlock, hideSpollerBody = true) {
       let spollerTitles = spollersBlock.querySelectorAll('[data-spoller]');
+      // let spollerBody = spollersBlock.querySelectorAll('[data-spo]');
       if (spollerTitles.length) {
         spollerTitles = Array.from(spollerTitles).filter(
           (item) => item.closest('[data-spollers]') === spollersBlock
@@ -274,6 +278,28 @@ export function spollers() {
           }
         });
       }
+      // console.log(spollerBody);
+      // if (spollerBody.length) {
+      //   // spollerBody = Array.from(spollerBody).filter(
+      //   //   (item) => item.closest('[data-spo]') === spollersBlock
+      //   // );
+      //   spollerBody.forEach((spollerBody) => {
+      //     spollerBody.addEventListener('click', function (e) {
+      //       if (hideSpollerBody) {
+      //         spollerBody.removeAttribute('tabindex');
+      //         if (!spollerBody.classList.contains('_spoller-active')) {
+      //           spollerBody.setAttribute('hidden', 'hidden');
+      //           console.log('1');
+      //         }
+      //       } else {
+      //         spollerBody.setAttribute('tabindex', '-1');
+      //         spollerBody.setAttribute('hidden', 'hidden');
+      //         console.log('2');
+      //       }
+
+      //     });
+      //   });
+      // }
     }
     function setSpollerAction(e) {
       const el = e.target;
@@ -301,6 +327,7 @@ export function spollers() {
       const spollerActiveTitle = spollersBlock.querySelector(
         '[data-spoller]._spoller-active'
       );
+
       const spollerSpeed = spollersBlock.dataset.spollersSpeed
         ? parseInt(spollersBlock.dataset.spollersSpeed)
         : 500;
@@ -313,22 +340,23 @@ export function spollers() {
       }
     }
     // Закрытие при клике вне спойлера
-    const spollersClose = document.querySelectorAll('[data-spoller-close]');
-    if (spollersClose.length) {
-      document.addEventListener('click', function (e) {
-        const el = e.target;
-        if (!el.closest('[data-spollers]')) {
-          spollersClose.forEach((spollerClose) => {
-            const spollersBlock = spollerClose.closest('[data-spollers]');
-            const spollerSpeed = spollersBlock.dataset.spollersSpeed
-              ? parseInt(spollersBlock.dataset.spollersSpeed)
-              : 500;
-            spollerClose.classList.remove('_spoller-active');
-            _slideUp(spollerClose.nextElementSibling, spollerSpeed);
-          });
-        }
-      });
-    }
+    // const spollersClose = document.querySelectorAll('[data-spoller-close]');
+    // if (spollersClose.length) {
+    //   document.addEventListener('click', function (e) {
+    //     const el = e.target;
+    //     if (!el.closest('[data-spollers]')) {
+    //       spollersClose.forEach((spollerClose) => {
+    //         console.log(spollerClose);
+    //         const spollersBlock = spollerClose.closest('[data-spollers]');
+    //         const spollerSpeed = spollersBlock.dataset.spollersSpeed
+    //           ? parseInt(spollersBlock.dataset.spollersSpeed)
+    //           : 500;
+    //         spollerClose.classList.remove('_spoller-active');
+    //         _slideUp(spollerClose.nextElementSibling, spollerSpeed);
+    //       });
+    //     }
+    //   });
+    // }
   }
 }
 // Модуль работы с табами =======================================================================================================================================================================================================================

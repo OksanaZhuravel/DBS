@@ -299,7 +299,7 @@
     gap: rem(12);
   }
 
-  &__content {
+  &__item {
     cursor: pointer;
     background-color: $bag;
     box-shadow: 0 0 36px 0 rgba($color: $dark__grey__blue, $alpha: 0.1);
@@ -317,45 +317,6 @@
     }
   }
 
-  &__details {
-  }
-
-  &__summary {
-    list-style: none;
-    position: relative;
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      right: rem(5);
-      top: 50%;
-      background-color: $color__green;
-      height: 2px;
-      width: rem(10);
-      transition: transform 0.5s ease 0s;
-    }
-    &::before {
-      transform: translate(-75%, -50%) rotate(40deg);
-    }
-    &::after {
-      transform: translate(0, -50%) rotate(-40deg);
-    }
-    .benefits__details[open] & {
-      &::before {
-        transform: translateX(-75%) rotate(-40deg);
-      }
-      &::after {
-        transform: rotate(40deg);
-      }
-    }
-    @media (min-width: $tablet) {
-      &::before,
-      &::after {
-        content: none;
-      }
-    }
-  }
-
   &__subtitle {
     display: grid;
     text-transform: uppercase;
@@ -366,11 +327,26 @@
     @media (min-width: $mobileSmall) {
       display: block;
     }
+    &.spollers__title {
+      padding: 0;
+    }
+    // ._spoller-init & {
+    //   @media (min-width: $tablet) {
+    //     &::before,
+    //     &::after {
+    //       content: none;
+    //     }
+    //   }
+    // }
+  }
+
+  &__body {
   }
 
   &__cart {
   }
 }
+
 //==========================================================================================================================================
 
 .connection {

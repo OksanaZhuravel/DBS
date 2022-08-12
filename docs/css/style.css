@@ -311,6 +311,9 @@ h4 {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: transparent;
   padding: 0.75rem 0.9375rem;
   border-radius: 3px;
@@ -581,7 +584,7 @@ body::after {
   top: 50%;
   background-color: #00b948;
   height: 2px;
-  width: 15px;
+  width: 0.625rem;
   -webkit-transition: -webkit-transform 0.5s ease 0s;
   transition: -webkit-transform 0.5s ease 0s;
   -o-transition: transform 0.5s ease 0s;
@@ -4133,7 +4136,7 @@ body::after {
   gap: 0.75rem;
 }
 
-.benefits__content {
+.benefits__item {
   cursor: pointer;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 36px 0 rgba(67, 76, 82, 0.1);
@@ -4145,51 +4148,6 @@ body::after {
   -o-transition: box-shadow 0.3s ease 0s;
   transition: box-shadow 0.3s ease 0s;
   transition: box-shadow 0.3s ease 0s, -webkit-box-shadow 0.3s ease 0s;
-}
-
-.benefits__summary {
-  list-style: none;
-  position: relative;
-}
-
-.benefits__summary::before,
-.benefits__summary::after {
-  content: "";
-  position: absolute;
-  right: 0.3125rem;
-  top: 50%;
-  background-color: #00b948;
-  height: 2px;
-  width: 0.625rem;
-  -webkit-transition: -webkit-transform 0.5s ease 0s;
-  transition: -webkit-transform 0.5s ease 0s;
-  -o-transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s;
-  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
-}
-
-.benefits__summary::before {
-  -webkit-transform: translate(-75%, -50%) rotate(40deg);
-      -ms-transform: translate(-75%, -50%) rotate(40deg);
-          transform: translate(-75%, -50%) rotate(40deg);
-}
-
-.benefits__summary::after {
-  -webkit-transform: translate(0, -50%) rotate(-40deg);
-      -ms-transform: translate(0, -50%) rotate(-40deg);
-          transform: translate(0, -50%) rotate(-40deg);
-}
-
-.benefits__details[open] .benefits__summary::before {
-  -webkit-transform: translateX(-75%) rotate(-40deg);
-      -ms-transform: translateX(-75%) rotate(-40deg);
-          transform: translateX(-75%) rotate(-40deg);
-}
-
-.benefits__details[open] .benefits__summary::after {
-  -webkit-transform: rotate(40deg);
-      -ms-transform: rotate(40deg);
-          transform: rotate(40deg);
 }
 
 .benefits__subtitle {
@@ -4211,6 +4169,10 @@ body::after {
   .benefits__subtitle {
     font-size: calc(1rem + 0.125 * (100vw - 20rem) / 53.875);
   }
+}
+
+.benefits__subtitle.spollers__title {
+  padding: 0;
 }
 
 .connection {
@@ -4855,7 +4817,7 @@ body::after {
     border-radius: 20px 0 0 20px;
   }
 
-  .benefits__content {
+  .benefits__item {
     padding: 2rem 3.1875rem;
   }
 
@@ -5029,11 +4991,6 @@ body::after {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-  }
-
-  .benefits__summary::before,
-  .benefits__summary::after {
-    content: none;
   }
 
   .application__box {
@@ -5279,7 +5236,7 @@ body::after {
             box-shadow: 0 0 36px 0 rgba(229, 231, 236, 0.5);
   }
 
-  .benefits__content:hover {
+  .benefits__item:hover {
     -webkit-box-shadow: 0 0 36px 0 rgba(67, 76, 82, 0.5);
             box-shadow: 0 0 36px 0 rgba(67, 76, 82, 0.5);
   }
