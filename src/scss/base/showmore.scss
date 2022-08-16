@@ -13,7 +13,7 @@
   span {
     display: block;
     text-align: center;
-    font-size: rem(17);
+    @include adaptiveValue('font-size', 17, 14);
     padding: rem(5);
     &:last-child {
       display: none;
