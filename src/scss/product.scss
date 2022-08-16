@@ -187,11 +187,9 @@
   }
 
   &__navigation {
-    // height: rem(360);
     border-radius: 20px;
     padding: rem(48) rem(20) rem(58) rem(34);
-    // padding: 48px 34px;
-    background-color: $dark__grey__blue;
+    background-color: #49555d;
     display: grid;
     gap: rem(17);
     justify-items: start;
@@ -329,9 +327,7 @@
       cursor: pointer;
       border: none;
       outline: none;
-
-      &:focus {
-        pointer-events: none;
+      &._focus {
         & + .benefits__body {
           visibility: visible;
           opacity: 1;
@@ -348,12 +344,17 @@
     padding: rem(24);
     display: grid;
     text-transform: uppercase;
-    color: $dark__grey__blue;
+    // color: $dark__grey__blue;
     font-stretch: condensed;
     line-height: 1.33;
     @include adaptiveValue('font-size', 18, 16);
+    &._focus {
+      color: $dark__grey__blue;
+      padding: rem(32) rem(51) rem(24) rem(51);
+    }
+
     @media (min-width: $mobile) {
-      padding: rem(32) rem(24) rem(24) rem(51);
+      padding: rem(32) rem(51);
     }
   }
 

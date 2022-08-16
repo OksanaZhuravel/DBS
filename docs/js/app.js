@@ -4773,6 +4773,15 @@
     }
     console.log(cookiecook);
     console.log(document.cookie);
+    document.querySelector(".benefits__box");
+    let menuItem = document.querySelectorAll(".benefits__subtitle");
+    document.addEventListener("click", (event => {
+        let target = event.target;
+        if (target.classList.contains("benefits__subtitle")) {
+            for (let i = 0; i < menuItem.length; i++) menuItem[i].classList.remove("_focus");
+            target.classList.add("_focus");
+        }
+    }));
     isWebp();
     menuInit();
     spollers();

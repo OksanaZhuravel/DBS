@@ -4,7 +4,7 @@
 
   <body>
     <div class="wrapper">
-      @@include('html/_header.htm',{})
+      @@include('html/_header.htm',{"product":"_active"})
       <main class="page-product page" data-sticky data-sticky-header>
         <section class="product">
           <div class="product__container">
@@ -217,8 +217,8 @@
             <h2 class="benefits__title">Основные преимущества</h2>
             <div class="benefits__box">
               <div class="benefits__item">
-                <button type="button" class="benefits__subtitle" autofocus>
-                  Согласование и&nbsp;<span>подтверждение сделок</span>
+                <button type="button" class="benefits__subtitle _focus">
+                  Согласование и&nbsp;подтверждение сделок
                 </button>
                 <div class="benefits__body">
                   <div class="benefits__cart box box--benefits">
@@ -241,7 +241,7 @@
               </div>
               <div class="benefits__item">
                 <button type="button" class="benefits__subtitle">
-                  Логирование всех <span>событий</span>
+                  Логирование всех событий
                 </button>
                 <div class="benefits__body">
                   <div class="benefits__cart box box--benefits">
@@ -264,7 +264,7 @@
               </div>
               <div class="benefits__item">
                 <button type="button" class="benefits__subtitle">
-                  Собственное хранилище <span>данных</span>
+                  Собственное хранилище данных
                 </button>
                 <div class="benefits__body">
                   <div class="benefits__cart box box--benefits">
@@ -287,7 +287,7 @@
               </div>
               <div class="benefits__item">
                 <button type="button" class="benefits__subtitle">
-                  Внутренняя и&nbsp;<span>внешняя система ЭДО</span>
+                  Внутренняя и&nbsp;внешняя система ЭДО
                 </button>
                 <div class="benefits__body">
                   <div class="benefits__cart box box--benefits">
@@ -312,7 +312,7 @@
               </div>
               <div class="benefits__item">
                 <button type="button" class="benefits__subtitle">
-                  Настройка уровней <span>доступов и&nbsp;видимости</span>
+                  Настройка уровней доступов и&nbsp;видимости
                 </button>
                 <div class="benefits__body">
                   <div class="benefits__cart box box--benefits">
@@ -335,7 +335,7 @@
               </div>
               <div class="benefits__item">
                 <button type="button" class="benefits__subtitle">
-                  Контроль сроков и&nbsp;<span>дедлайнов</span>
+                  Контроль сроков и&nbsp;дедлайнов
                 </button>
                 <div class="benefits__body">
                   <div class="benefits__cart box box--benefits">
@@ -357,7 +357,7 @@
               </div>
               <div class="benefits__item">
                 <button type="button" class="benefits__subtitle">
-                  Статусы, статистика и&nbsp;<span>анализ</span>
+                  Статусы, статистика и&nbsp;анализ
                 </button>
                 <div class="benefits__body">
                   <div class="benefits__cart box box--benefits">
@@ -399,34 +399,29 @@
                   <ul class="connection__list">
                     <li class="connection__item">
                       <span class="connection__text connection__text--color">Скачать программу FortiClient:</span>
-                      <a href="" class="connection__link">Версия для Windows</a>
-                      <a href="" class="connection__link">Версия для Mac</a>
+                      <a target="_blank" href="https://links.fortinet.com/forticlient/win/vpnagent"
+                        class="connection__link">Версия для Windows</a>
+                      <a target="_blank" href="https://links.fortinet.com/forticlient/mac/vpnagent "
+                        class="connection__link">Версия для Mac</a>
                     </li>
                     <li class="connection__item">
                       <span class="connection__text connection__text--color">Скачать Конфигурационный файл:</span>
-                      <a href="" class="connection__link">DBS.conf</a>
+                      <a download href="files/dbs.conf" class="connection__link">dbs.conf</a>
                     </li>
                     <li class="connection__item">
-                      <span class="connection__text">Установить программу на компьютер, запустить
-                        <span class="connection__text connection__text--bold">FortiClient</span>
-                        и нажать на иконку с замочком в верхнем правом углу, во
-                        всплывающем окне ответить «Да»:</span>
+                      <span class="connection__text">Пожалуйста, ознакомьтесь с полной
+                        <a download href="files/setup.pdf" class="connection__link">инструкцией</a>
+                        подключения.</span>
                     </li>
                   </ul>
                 </div>
                 <div class="connection__body">
                   <span class="connection__subtitle">Инструкция по эксплуатации:</span>
-                  <ul class="connection__list">
-                    <li class="connection__item">
-                      <span class="connection__text">Пункт 1</span>
-                    </li>
-                    <li class="connection__item">
-                      <span class="connection__text">Пункт 2</span>
-                    </li>
-                    <li class="connection__item">
-                      <span class="connection__text">Пункт 3</span>
-                    </li>
-                  </ul>
+                  <div class="connection__item">
+                    <span class="connection__text">Пожалуйста, ознакомьтесь с
+                      <a download href="files/manual.pdf" class="connection__link">инструкцией</a>
+                      по эксплуатации приложения  DBS-Soft </span>
+                  </div>
                 </div>
               </div>
             </div>

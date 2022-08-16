@@ -42,24 +42,20 @@ if (cookiecook != 'no') {
 console.log(cookiecook);
 console.log(document.cookie);
 
-// let box = document.querySelector('.benefits__box');
-// let details = box
-//   .querySelectorAll('.benefits__details')
-//   .forEach(function (detail) {
-//     detail.addEventListener('click', function (e) {
-//       if (!detail.hasAttribute('open')) {
-//         detail.setAttribute('open', true);
-//       } else {
-//         detail.setAttribute('open', '-');
-//       }
-//     });
-//   });
-// console.log(box);
-// console.log(details);
-//   .forEach(function (activ) {
-//   activ.addEventListener('click', function (e) {
-//     if (!activ.classList.contains('_active')) {
-//       activ.classList.add('_active');
-//     }
-//   });
-// });
+let parent = document.querySelector('.benefits__box');
+let menuItem = document.querySelectorAll('.benefits__subtitle');
+
+document.addEventListener('click', (event) => {
+  // Отлавливаем элемент в родители на который мы нажали
+  let target = event.target;
+
+  // Проверяем тот ли это элемент который нам нужен
+  if (target.classList.contains('benefits__subtitle')) {
+    for (let i = 0; i < menuItem.length; i++) {
+      // Убираем у других
+      menuItem[i].classList.remove('_focus');
+    }
+    // Добавляем тому на который нажали
+    target.classList.add('_focus');
+  }
+});
