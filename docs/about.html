@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20220816140201">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220816141607">
 	<link rel="icon" href="img/general/favicon.svg" type="image/svg+xml">
 	<script>
 		window.history.replaceState({}, null, '/');
@@ -25,11 +25,21 @@
 				</div>
 				<nav class="header__menu menu">
 					<ul class="menu__list">
-						<li class="menu__item"><a href="about.html" class="menu__link _active">О компании</a></li>
-						<li class="menu__item"><a href="solutions.html" class="menu__link undefined">Решение</a></li>
-						<li class="menu__item"><a href="product.html" class="menu__link undefined">Продукт</a></li>
-						<li class="menu__item"><a href="prices.html" class="menu__link undefined">Стоимость услуг</a></li>
-						<li class="menu__item"><a data-goto=".footer" href="" class="menu__link">Контакты</a></li>
+						<li class="menu__item">
+							<a href="about.html" class="menu__link _active">О компании</a>
+						</li>
+						<li class="menu__item">
+							<a href="solutions.html" class="menu__link undefined">Решение</a>
+						</li>
+						<li class="menu__item">
+							<a href="product.html" class="menu__link undefined">Продукт</a>
+						</li>
+						<li class="menu__item">
+							<a href="prices.html" class="menu__link undefined">Стоимость услуг</a>
+						</li>
+						<li class="menu__item">
+							<a data-goto=".footer" href="" class="menu__link">Контакты</a>
+						</li>
 					</ul>
 				</nav>
 				<a href="" data-damax=".menu, 767.98, last" data-popup="#feedback" class="header__button button"><span>Попробовать</span></a>
@@ -176,41 +186,43 @@
 	<div id="feedback" aria-hidden="true" class="popup">
 		<div class="popup__wrapper">
 			<div class="popup__content">
-				<button data-close type="button" class="popup__close">
-				</button>
+				<button data-close type="button" class="popup__close"></button>
 				<div class="popup__text">
 					<div class="form">
-						<!-- <form data-dev class="form__boby" id="form" data-popup-message="#form-message"> -->
 						<form data-ajax method="POST" action="sendmail.php" class="form__boby" id="form" data-popup-message="#form-message">
-							<h2 class="form__title">Пора действовать! </h2>
-							<p class="form__text">Оставьте заявку и наши специалисты свяжутся с Вами.</p>
+							<h2 class="form__title">Пора действовать!</h2>
+							<p class="form__text">
+								Оставьте заявку и наши специалисты свяжутся с Вами.
+							</p>
 							<div class="form__item">
-								<input data-required type="text" name="name" placeholder="Как к вам обращаться?*" class="form__input" data-error="Введите Ваше Имя">
+								<input data-required type="text" name="name" placeholder="Как к вам обращаться?*" class="form__input" data-error="Введите Ваше Имя" />
 							</div>
 							<div class="form__inner">
 								<div class="form__item">
-									<input data-required="tel" type="tel" name="phone" placeholder="Телефон*" data-error="Введите Номер Телефона" class="form__input">
+									<input data-required="tel" type="tel" name="phone" placeholder="Телефон*" data-error="Введите Номер Телефона" class="form__input" />
 								</div>
 								<div class="form__item">
-									<input data-required="email" type="text" name="email" placeholder="E-mail*" class="form__input" data-error="Введите Вашу Почту">
+									<input data-required="email" type="text" name="email" placeholder="E-mail*" class="form__input" data-error="Введите Вашу Почту" />
 								</div>
 							</div>
 							<div class="checkbox social">
-								<p class="social__form">Пожалуйста, уточните удобный способ связи.</p>
+								<p class="social__form">
+									Пожалуйста, уточните удобный способ связи.
+								</p>
 								<div class="checkbox">
-									<input id="c_1" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="Whatsapp" name="whatsapp">
+									<input id="c_1" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="Whatsapp" name="whatsapp" />
 									<label for="c_1" class="social__label"><span class="checkbox__text social__text">Whatsapp</span></label>
 								</div>
 								<div class="checkbox">
-									<input id="c_2" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="Telegram" name="telegram">
+									<input id="c_2" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="Telegram" name="telegram" />
 									<label for="c_2" class="social__label social__label--telegram"><span class="checkbox__text social__text">Telegram</span></label>
 								</div>
 								<div class="checkbox">
-									<input id="c_3" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="E-mail" name="post">
+									<input id="c_3" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="E-mail" name="post" />
 									<label for="c_3" class="social__label social__label--email"><span class="checkbox__text social__text">E-mail</span></label>
 								</div>
 								<div class="checkbox">
-									<input id="c_4" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="Телефон" name="telefon">
+									<input id="c_4" data-error="Ошибка" class="checkbox__input social__input" type="checkbox" value="Телефон" name="telefon" />
 									<label for="c_4" class="social__label social__label--phone"><span class="checkbox__text social__text">Телефон</span></label>
 								</div>
 							</div>
@@ -218,16 +230,19 @@
 								<textarea name="message" class="form__input" placeholder="Опишите сферу деятельности вашей компании  и  задачу, с которой требуется помощь
               "></textarea>
 							</div>
-							<div class="checkbox form__item ">
-								<input data-required id="c_5" class="checkbox__input" type="checkbox" value="получено" checked name="agreement">
+							<div class="checkbox form__item">
+								<input data-required id="c_5" class="checkbox__input" type="checkbox" value="получено" checked name="agreement" />
 								<label for="c_5" class="checkbox__label">
-									<span class="checkbox__text">Подтверждаю согласие на&nbsp;обработку своих персональных данных
-										и&nbsp;принимаю условия
-										<a href="policy.html" class="checkbox__link">Политики персональных данных</a> и&nbsp;<a href="privacy.html" class="checkbox__link">Политике cookies</a>
+									<span class="checkbox__text">Подтверждаю согласие на&nbsp;обработку своих персональных
+										данных и&nbsp;принимаю условия
+										<a href="policy.html" class="checkbox__link">Политики персональных данных</a>
+										и&nbsp;<a href="privacy.html" class="checkbox__link">Политике cookies</a>
 									</span></label>
 							</div>
 							<div class="form__buttons">
-								<button type="submit" class="button button--access">Отправить</button>
+								<button type="submit" class="button button--access">
+									Отправить
+								</button>
 							</div>
 						</form>
 					</div>
@@ -240,15 +255,17 @@
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close"></button>
-				<div class="popup__title"> Ваша заявка отправленна.</div>
-				<div class="popup__text"> Ожидайте обратную связь от нас.</div>
+				<div class="popup__title">Ваша заявка отправленна.</div>
+				<div class="popup__text">Ожидайте обратную связь от нас.</div>
 			</div>
 		</div>
 	</div>
 	<div class="cookie" id="cookie" aria-hidden="true">
 		<div class="cookie__notice">
-			<p class="cookie__text">Мы обрабатываем данные cookies для улучшения работы сайта и вашего удобства.
-				Пожалуйста, подтвердите ваше согласие на обработку файлов cookies согласно
+			<p class="cookie__text">
+				Мы обрабатываем данные cookies для улучшения работы сайта и вашего
+				удобства. Пожалуйста, подтвердите ваше согласие на обработку файлов
+				cookies согласно
 				<a class="cookie__link" href="privacy.html">Политике cookies.</a>
 			</p>
 			<div>
@@ -256,7 +273,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20220816140201"></script>
+	<script src="js/app.min.js?_v=20220816141607"></script>
 </body>
 
 </html>
