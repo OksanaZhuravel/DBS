@@ -177,6 +177,9 @@
       -webkit-box-shadow: 0 0 0px 1000px #f7f7f7 inset;
       transition: background-color 5000s ease-in-out 0s;
     }
+    &.checkbox {
+      margin-bottom: rem(24);
+    }
   }
 
   &__input {
@@ -208,7 +211,8 @@
     }
   }
   &__buttons {
-    margin-top: rem(48);
+    // margin-top: rem(48);
+    margin-top: rem(24);
   }
 }
 //==========================================================================================================================================
@@ -344,6 +348,31 @@
   }
   &--benefits {
     padding-top: rem(24);
+    & .box__body {
+      gap: 0;
+    }
+
+    & .box__text {
+      font-size: rem(17);
+      line-height: 1;
+    }
+  }
+  &__subtitle {
+    color: $dark__grey__blue;
+    @include adaptiveValue('font-size', 17, 14);
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    font-family: 'Roboto';
+    list-style: circle;
+  }
+
+  &__item {
+    font-size: rem(17);
+    margin-top: rem(10);
   }
   &__title {
     text-transform: uppercase;

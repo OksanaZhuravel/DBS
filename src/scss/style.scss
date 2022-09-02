@@ -162,14 +162,14 @@ body {
       padding: 0 rem(math.div($containerPadding, 2));
     }
   }
-  [class='benefits__container'] {
-    @if ($maxWidthContainerAbout>0) {
-      max-width: rem($maxWidthContainerAbout);
-    }
-    @if ($containerPadding>0) {
-      padding: 0 rem(math.div($containerPadding, 2));
-    }
-  }
+  // [class='benefits__container'] {
+  //   @if ($maxWidthContainerAbout>0) {
+  //     max-width: rem($maxWidthContainerAbout);
+  //   }
+  //   @if ($containerPadding>0) {
+  //     padding: 0 rem(math.div($containerPadding, 2));
+  //   }
+  // }
 } @else {
   // По брейк-поинтам
   [class*='__container'] {

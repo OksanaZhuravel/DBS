@@ -302,11 +302,6 @@ h4 {
   padding: 0 1.5rem;
 }
 
-[class=benefits__container] {
-  max-width: 47.0625rem;
-  padding: 0 1.5rem;
-}
-
 .button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -928,6 +923,10 @@ body::after {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+.form__item.checkbox {
+  margin-bottom: 1.5rem;
+}
+
 .form__input {
   border: solid 1px #979797;
   width: 100%;
@@ -979,7 +978,7 @@ body::after {
 }
 
 .form__buttons {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 .social {
@@ -1141,6 +1140,44 @@ body::after {
 
 .box--benefits {
   padding-top: 1.5rem;
+}
+
+.box--benefits .box__body {
+  gap: 0;
+}
+
+.box--benefits .box__text {
+  font-size: 1.0625rem;
+  line-height: 1;
+}
+
+.box__subtitle {
+  color: #434c52;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+@supports (font-size: clamp( 0.875rem , 0.8053944316rem  +  0.3480278422vw , 1.0625rem )) {
+  .box__subtitle {
+    font-size: clamp( 0.875rem , 0.8053944316rem  +  0.3480278422vw , 1.0625rem );
+  }
+}
+
+@supports not (font-size: clamp( 0.875rem , 0.8053944316rem  +  0.3480278422vw , 1.0625rem )) {
+  .box__subtitle {
+    font-size: calc(0.875rem + 0.1875 * (100vw - 20rem) / 53.875);
+  }
+}
+
+.box__list {
+  font-family: "Roboto";
+  list-style: circle;
+}
+
+.box__item {
+  font-size: 1.0625rem;
+  margin-top: 0.625rem;
 }
 
 .box__title {
@@ -4181,12 +4218,13 @@ body::after {
   visibility: visible;
   opacity: 1;
   height: auto;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: opacity 1.3s ease 0s, height 0.6s ease 0s;
+  -o-transition: opacity 1.3s ease 0s, height 0.6s ease 0s;
+  transition: opacity 1.3s ease 0s, height 0.6s ease 0s;
 }
 
 .benefits__subtitle {
+  min-height: 5.6875rem;
   text-align: left;
   width: 100%;
   font-weight: 700;
@@ -4196,6 +4234,9 @@ body::after {
   text-transform: uppercase;
   font-stretch: condensed;
   line-height: 1.33;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 @supports (font-size: clamp( 1rem , 0.9535962877rem  +  0.2320185615vw , 1.125rem )) {
@@ -4211,11 +4252,11 @@ body::after {
 }
 
 .benefits__subtitle._focus {
-  color: #434c52;
-  padding: 2rem 3.1875rem 1.5rem 3.1875rem;
+  color: #00b948;
 }
 
 .benefits__body {
+  padding: 0 0.625rem;
   pointer-events: auto;
   visibility: hidden;
   opacity: 0;
@@ -4874,8 +4915,16 @@ body::after {
     padding: 4.125rem 1.5rem 3.375rem 1.5rem;
   }
 
+  .benefits__subtitle._focus {
+    padding: 2rem 3.1875rem 1.5rem 3.1875rem;
+  }
+
   .benefits__subtitle {
     padding: 2rem 3.1875rem;
+  }
+
+  .benefits__body {
+    padding: 0;
   }
 
   .benefits__cart {
@@ -5305,6 +5354,11 @@ body::after {
   .benefits__item:hover {
     -webkit-box-shadow: 0 0 36px 0 rgba(67, 76, 82, 0.2);
             box-shadow: 0 0 36px 0 rgba(67, 76, 82, 0.2);
+  }
+
+  .benefits__subtitle:hover {
+    color: #00b948;
+    font-size: 1.25rem;
   }
 
   .connection__button:hover {
